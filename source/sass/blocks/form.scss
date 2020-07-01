@@ -1,0 +1,30 @@
+.form__text {
+  @include Roboto-style(36px, normal, 57px, #FFFFFF, left, none);
+}
+
+.form__description {
+  color: #FFFFFF;
+}
+
+.form__input::placeholder {
+  padding: 0;
+
+  background-color:  #00B2FF;
+
+  color: #FFFFFF;
+}
+
+.form__submit-button {
+  background-color: transparent;
+
+  @include Roboto-style(14px, bold, 18px, #FFFFFF, center, uppercase);
+  letter-spacing: 0.05em;
+}
+
+.form__privacy-label {
+  opacity: 0.8;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}

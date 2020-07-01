@@ -4,23 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smart Device</title>
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" type="font/woff">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" type="font/woff">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" type="font/woff">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <div class="header__wrapper wrapper">
       <a class="header__logo-link" href="#">
-        <picture>
-          <source media="(min-width: 1024px)" srcset="">
-          <source media="(min-width: 750px)" srcset="">
-          <source srcset="">
-          <img class="header__logo-image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" width="38" height="38" alt="Логотип сайта 'Smart Device'">
-        </picture>
+        <img class="header__logo-image" src="img/brain.svg" width="52" height="52" alt="Логотип сайта 'Smart Device'">
+        <span class="header__logo-text">Smart Device</span>
+        <span class="header__logo-description">Умные технологии</span>
       </a>
       <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
-      <ul class="header__contacts-list contacts-list">
-        <li class="contacts-list__item" aria-label="Наша электронная почта">info@sd.ru</li>
-        <li class="contacts-list__item" aria-label="Наш телефон">+7 (495) 000 52 52</li>
-      </ul>
+      <div class="header__contacts-list contacts-list">
+        <a class="contacts-list__item" href="mailto:info@sd.ru" aria-label="Наша электронная почта">info@sd.ru</a>
+        <a class="contacts-list__item" href="tel:+74950005252" aria-label="Наш телефон">+7 (495) 000 52 52</a>
+      </div>
       <button class="header__callback-button" type="button">Заказать звонок</button>
     </div>
   </header>
@@ -28,9 +32,9 @@
     <section class="main-screen">
       <div class="main-screen__wrapper wrapper">
         <picture>
-          <source media="(min-width: 1024px)" srcset="">
-          <source media="(min-width: 750px)" srcset="">
-          <img class="main-screen__image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" srcset="" alt="Фото печатной платы">
+          <source media="(min-width: 1024px)" srcset="img/boards.png">
+          <source media="(min-width: 750px)" srcset="img/boards-tablet.png">
+          <img class="main-screen__image" src="img/boards-mobile.png" srcset="img/boards-mobile.png" alt="Фото печатной платы">
         </picture>
         <h1 class="main-screen__headline">Печатные платы</h1>
         <p class="main-screen__description">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
@@ -41,25 +45,25 @@
       <div class="benefits__wrapper wrapper">
         <h2 class="benefits__headline visually-hidden">Наши преимущества</h2>
         <ul class="benefits__list">
-          <li class="benefits__list-item">
+          <li class="benefits__list-item benefits__list-item--watch">
             <h3 class="benefits__item-headline">Оперативные сроки</h3>
             <p class="benefits__item-description">Усовершенствованная логистическая система позволяет нам просчитывать
               стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
             </p>
           </li>
-          <li class="benefits__list-item">
+          <li class="benefits__list-item benefits__list-item--people">
             <h3 class="benefits__item-headline">Крупные поставщики</h3>
             <p class="benefits__item-description">Нашими поставщиками являются такие крупные мировые компании как:
               OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество
               нашей продукции.
             </p>
           </li>
-          <li class="benefits__list-item">
+          <li class="benefits__list-item benefits__list-item--man">
             <h3 class="benefits__item-headline">Полная конфиденциальность</h3>
             <p class="benefits__item-description">По желанию клиента  мы обеспечиваем полную конфеденциальность.
             </p>
           </li>
-          <li class="benefits__list-item">
+          <li class="benefits__list-item benefits__list-item--money">
             <h3 class="benefits__item-headline">Персонализация стоимости</h3>
             <p class="benefits__item-description">Мы  подбираем определенную фабрику, поставщиков, вид доставки,
               чтобы установить ту цену, которая Вас устраивает.
@@ -89,17 +93,20 @@
         <h2 class="services__headline visually-hidden">Товары и услуги</h2>
         <p class="services__description">Service Device предлагает следующие товары и услуги</p>
         <ul class="services__list">
-          <li class="services__item">
-            Производство  печатных плат
-            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге"></a>
+          <li class="services__item services__item--production">
+            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге">
+              <h4 class="services__item-text">Производство  печатных плат</h4>
+            </a>
           </li>
-          <li class="services__item">
-            Монтаж печатных  плат
-            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге"></a>
+          <li class="services__item services__item--mounting">
+            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге">
+              <h4 class="services__item-text">Монтаж печатных  плат</h4>
+            </a>
           </li>
-          <li class="services__item">
-            Комплектующие для светотехники
-            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге"></a>
+          <li class="services__item services__item--kits">
+            <a class="services__item-link" href="#" aria-label="Открыть подробную информацию об услуге">
+              <h4 class="services__item-text">Комплектующие для светотехники</h4>
+            </a>
           </li>
         </ul>
       </div>
@@ -121,7 +128,7 @@
               <input class="form__input" type="text" placeholder="Ваш вопрос" name="text" id="text">
             </label>
           </fieldset>
-          <button class="form_submit-button" type="submit">Задать вопрос</button>
+          <button class="form__submit-button" type="submit">Задать вопрос</button>
           <label class="form__privacy-label">
             <input class="form__privacy-input" type="checkbox" name="user_privacy" id="privacy">
             <span class="form__privacy-description">Я согласен на обработку  персональных данных</span>
@@ -129,7 +136,7 @@
         </form>
       </div>
     </section>
-    <dialog class="modal-window">
+    <section class="modal-window">
       <h2 class="modal-window__headline visually-hidden">Форма обратной связи</h2>
       <form class="modal-window__form form">
         <p class="form__text">Закажите звонок</p>
@@ -151,34 +158,31 @@
           <span class="form__privacy-description">Я согласен на обработку  персональных данных</span>
         </label>
       </form>
-    </dialog>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
       <div class="footer__social-block social-block">
         <a class="social-block__logo-link" href="#">
-          <picture>
-            <source media="(min-width: 1024px)" srcset="">
-            <source media="(min-width: 750px)" srcset="">
-            <source srcset="">
-            <img class="social-block__logo-image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" width="38" height="38" alt="Логотип сайта 'Smart Device'">
-          </picture>
+          <img class="social-block__logo-image" src="img/brain.svg" width="52" height="52" alt="Логотип сайта 'Smart Device'">
+          <span class="social-block__logo-text">Smart Device</span>
+          <span class="social-block__logo-description">Умные технологии</span>
         </a>
         <span class="social-block__item social-block__item--mod">1999-2018 SD Service Devices</span>
         <ul class="social-block__social-list social-list">
-          <li class="social-list__item">
+          <li class="social-list__item social-list__item--fb">
             <a class="social-list__link" href="#" aria-label="Фейсбук">
-              <img class="social-list__image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" width="27" height="27">
+              <img class="social-list__image" src="img/fb.svg" width="27" height="27" alt="Ссылка на Фейсбук">
             </a>
           </li>
-          <li class="social-list__item">
+          <li class="social-list__item social-list__item--ok">
             <a class="social-list__link" href="#" aria-label="Одноклассники">
-              <img class="social-list__image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" width="26" height="26">
+              <img class="social-list__image" src="img/ok.svg" width="26" height="26" alt="Ссылка на Одноклассники">
             </a>
           </li>
-          <li class="social-list__item">
+          <li class="social-list__item social-list__item--vk">
             <a class="social-list__link" href="#" aria-label="Вконтакте">
-              <img class="social-list__image" src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_103889/images/tild3266-6236-4266-b833-393539393436__cat-3601092_1280.jpg" width="27" height="26">
+              <img class="social-list__image" src="img/vk.svg" width="27" height="26" alt="Ссылка на Вконтакте">
             </a>
           </li>
         </ul>
@@ -210,7 +214,7 @@
         </ul>
       </div>
       <div class="footer__contacts contacts">
-        <h3 class="contacts__headline">Разделы сайта</h3>
+        <h3 class="contacts__headline">Наш офис</h3>
         <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link" href="#">г. Мытищи, Олимпийский проспект, д.10</a>

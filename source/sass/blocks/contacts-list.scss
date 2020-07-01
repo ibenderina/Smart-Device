@@ -1,0 +1,35 @@
+.contacts-list__item {
+  position: relative;
+
+  text-decoration: none;
+  line-height: 18px;
+  color: #FFFFFF;
+
+  &:before {
+    content: "";
+
+    position: absolute;
+    display: block;
+    left: -20px;
+
+    @include backImage();
+  }
+
+  &:first-child:before {
+    width: 14.5px;
+    height: 10px;
+    top: 5px;
+
+    background-image: url("../../img/mail.png");
+  }
+
+  &:last-of-type:before {
+    top: 0;
+    width: 17px;
+    height: 17px;
+
+    background-image: url("../../img/phone.png");
+  }
+}
+
+

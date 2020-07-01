@@ -1,0 +1,21 @@
+.contacts__headline {
+  @include Roboto-style(15px, normal, 16px, #1B2D37, center, uppercase);
+  letter-spacing: 0.05em;
+}
+
+.contacts__list {
+  list-style-type: none;
+}
+
+.contacts__item {
+  opacity: 0.5;
+
+  font-size: 15px;
+  line-height: 25px;
+  color: #1B2D37;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #1B2D37;
+}

@@ -1,0 +1,67 @@
+.benefits__list {
+  list-style-type: none;
+}
+
+.benefits__list-item {
+  position: relative;
+  border-left: 3px solid #00B2FF;
+}
+
+.benefits__list-item:hover,
+.benefits__list-item:focus {
+  background-color: #00B2FF;
+
+  .benefits__item-headline {
+    color: #FFFFFF;
+  }
+
+  .benefits__item-description {
+    color: #FFFFFF;
+  }
+}
+
+.benefits__list-item {
+  &::before {
+    content: "";
+
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+
+    @include backImage();
+  }
+
+  &--watch::before {
+    width: 29px;
+    height: 35px;
+
+    background-image: url("../../img/watch.svg");
+  }
+
+  &--people::before {
+    width: 35px;
+    height: 35px;
+
+    background-image: url("../../img/people.svg");
+  }
+
+  &--man::before {
+    width: 36px;
+    height: 31px;
+
+    background-image: url("../../img/man.svg");
+  }
+
+  &--money::before {
+    width: 35px;
+    height: 35px;
+
+    background-image: url("../../img/money.svg");
+  }
+}
+
+.benefits__item-headline {
+  @include Roboto-style(24px, normal, 38px, #00B2FF, left, none);
+}
+

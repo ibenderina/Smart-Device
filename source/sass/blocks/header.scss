@@ -1,0 +1,21 @@
+.header {
+  background-color: #1B2D37;
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__logo-text {
+  @include Roboto-style(25px, bold, 33px, #FFFFFF, left, none);
+}
+
+.header__logo-description {
+  @include Roboto-style(12px, bold, 14px, #788891, left, none);
+}
+
+.header__callback-button {
+  background-color: transparent;
+
+  @include Roboto-style(14px, bold, 18px, #FFFFFF, center, uppercase);
+}

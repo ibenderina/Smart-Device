@@ -1,0 +1,25 @@
+@mixin Roboto-style($font-size, $font-weight, $line-height, $color, $text-align, $text-transform) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin PTMono-style($font-size, $font-weight, $line-height, $color, $text-align, $text-transform) {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin backImage() {
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
+}

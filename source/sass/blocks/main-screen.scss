@@ -1,0 +1,27 @@
+.main-screen {
+  background-color: #1B2D37;
+}
+
+.main-screen__headline {
+  @include Roboto-style(80px, bold, 106px, #FFFFFF, center, uppercase);
+  letter-spacing: 0.07em;
+}
+
+.main-screen__description {
+  font-size: 22px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+.main-screen__button {
+  background-color: transparent;
+
+  @include Roboto-style(16px, bold, 21px, #FFFFFF, center, uppercase);
+  letter-spacing: 0.05em;
+}
+
+.main-screen__image {
+  width: 705px;
+  height: 515px;
+}
+

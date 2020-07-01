@@ -1,0 +1,28 @@
+.about__wrapper {
+  position: relative;
+  padding: 30px 0 30px 40%;
+
+  &:before {
+    content: "";
+
+    position: absolute;
+    display: block;
+    width: 860px;
+    height: 484px;
+    top: 0;
+    left: -33%;
+
+    @include backImage();
+    background-image: url("../../img/2005.png");
+  }
+}
+
+.about__headline {
+  @include Roboto-style(36px, normal, 57px, #666666, left, none);
+}
+
+.about__more-link {
+  @include Roboto-style(14px, bold, 18px, #00B2FF, center, uppercase);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
