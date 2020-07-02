@@ -13,34 +13,41 @@
   <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="header__wrapper wrapper">
+  <section class="master-block">
+    <div class="master-block__wrapper wrapper">
+    <header class="master-block__header header">
       <a class="header__logo-link" href="#">
-        <img class="header__logo-image" src="img/brain.svg" width="52" height="52" alt="Логотип сайта 'Smart Device'">
-        <span class="header__logo-text">Smart Device</span>
-        <span class="header__logo-description">Умные технологии</span>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x">
+          <img class="header__logo-image" src="img/brain.svg"
+               srcset="img/brain.svg"
+               alt="Логотип сайта 'Smart Device'">
+        </picture>
       </a>
       <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
       <div class="header__contacts-list contacts-list">
-        <a class="contacts-list__item" href="mailto:info@sd.ru" aria-label="Наша электронная почта">info@sd.ru</a>
-        <a class="contacts-list__item" href="tel:+74950005252" aria-label="Наш телефон">+7 (495) 000 52 52</a>
+        <a class="contacts-list__link" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
+          <span class="contacts-list__item-text">info@sd.ru</span>
+        </a>
+        <a class="contacts-list__link" href="tel:+74950005252" aria-label="Наш телефон">
+          <span class="contacts-list__item-text">+7 (495) 000 52 52</span>
+        </a>
       </div>
       <button class="header__callback-button" type="button">Заказать звонок</button>
-    </div>
-  </header>
-  <main class="main">
-    <section class="main-screen">
-      <div class="main-screen__wrapper wrapper">
-        <picture>
-          <source media="(min-width: 1024px)" srcset="img/boards.png">
-          <source media="(min-width: 750px)" srcset="img/boards-tablet.png">
-          <img class="main-screen__image" src="img/boards-mobile.png" srcset="img/boards-mobile.png" alt="Фото печатной платы">
-        </picture>
+    </header>
+    <section class="master-block__main-screen main-screen">
+      <div class="main-screen__text-wrapper">
         <h1 class="main-screen__headline">Печатные платы</h1>
         <p class="main-screen__description">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="main-screen__button" type="button">Получить бесплатную консультацию</button>
+        <button class="main-screen__button" type="button">
+          <span class="main-screen__button-text main-screen__button-text--mobile">Бесплатная консультация</span>
+          <span class="main-screen__button-text main-screen__button-text--tablet">Получить бесплатную консультацию</span>
+        </button>
       </div>
     </section>
+    </div>
+  </section>
+  <main class="main">
     <section class="benefits">
       <div class="benefits__wrapper wrapper">
         <h2 class="benefits__headline visually-hidden">Наши преимущества</h2>
@@ -164,9 +171,12 @@
     <div class="footer__wrapper wrapper">
       <div class="footer__social-block social-block">
         <a class="social-block__logo-link" href="#">
-          <img class="social-block__logo-image" src="img/brain.svg" width="52" height="52" alt="Логотип сайта 'Smart Device'">
-          <span class="social-block__logo-text">Smart Device</span>
-          <span class="social-block__logo-description">Умные технологии</span>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x">
+            <img class="social-block__logo-image" src="img/brain.svg"
+                 srcset="img/brain.svg"
+                 alt="Логотип сайта 'Smart Device'">
+          </picture>
         </a>
         <span class="social-block__item social-block__item--mod">1999-2018 SD Service Devices</span>
         <ul class="social-block__social-list social-list">

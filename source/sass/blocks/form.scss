@@ -1,23 +1,23 @@
 .form__text {
-  @include Roboto-style(36px, normal, 57px, #FFFFFF, left, none);
+  @include Roboto-style(36px, normal, 57px, $white, left, none);
 }
 
 .form__description {
-  color: #FFFFFF;
+  color: $white;
 }
 
 .form__input::placeholder {
   padding: 0;
 
-  background-color:  #00B2FF;
+  background-color:  $blue;
 
-  color: #FFFFFF;
+  color: $white;
 }
 
 .form__submit-button {
   background-color: transparent;
 
-  @include Roboto-style(14px, bold, 18px, #FFFFFF, center, uppercase);
+  @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
   letter-spacing: 0.05em;
 }
 
@@ -26,5 +26,5 @@
 
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: $white;
 }

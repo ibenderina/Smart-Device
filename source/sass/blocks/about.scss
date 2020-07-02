@@ -22,7 +22,7 @@
 }
 
 .about__more-link {
-  @include Roboto-style(14px, bold, 18px, #00B2FF, center, uppercase);
+  @include Roboto-style(14px, bold, 18px, $blue, center, uppercase);
   letter-spacing: 0.05em;
   text-decoration: none;
 }

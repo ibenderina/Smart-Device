@@ -4,19 +4,19 @@
 
 .benefits__list-item {
   position: relative;
-  border-left: 3px solid #00B2FF;
+  border-left: 3px solid $blue;
 }
 
 .benefits__list-item:hover,
 .benefits__list-item:focus {
-  background-color: #00B2FF;
+  background-color: $blue;
 
   .benefits__item-headline {
-    color: #FFFFFF;
+    color: $white;
   }
 
   .benefits__item-description {
-    color: #FFFFFF;
+    color: $white;
   }
 }
 
@@ -62,6 +62,6 @@
 }
 
 .benefits__item-headline {
-  @include Roboto-style(24px, normal, 38px, #00B2FF, left, none);
+  @include Roboto-style(24px, normal, 38px, $blue, left, none);
 }
 

@@ -1,5 +1,5 @@
 .site-sections__headline {
-  @include Roboto-style(15px, normal, 16px, #1B2D37, center, uppercase);
+  @include Roboto-style(15px, normal, 16px, $dark-background, center, uppercase);
   letter-spacing: 0.05em;
 }
 
@@ -12,10 +12,10 @@
 
   font-size: 15px;
   line-height: 25px;
-  color: #1B2D37;
+  color: $dark-background;
 }
 
 .site-sections__link {
   text-decoration: none;
-  color: #1B2D37;
+  color: $dark-background;
 }

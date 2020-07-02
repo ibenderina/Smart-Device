@@ -1,9 +1,9 @@
 .services {
-  background-color: #1B2D37;
+  background-color: $dark-background;
 }
 
 .services__description {
-  @include Roboto-style(36px, normal, 57px, #FFFFFF, left, none);
+  @include Roboto-style(36px, normal, 57px, $white, left, none);
 }
 
 .services__list {
@@ -40,6 +40,6 @@
 }
 
 .services__item-text {
-  @include Roboto-style(30px, normal, 20px, #FFFFFF, left, none);
+  @include Roboto-style(30px, normal, 20px, $white, left, none);
   z-index: 10;
 }

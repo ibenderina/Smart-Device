@@ -1,9 +1,7 @@
-@import "mixin.scss";
-
 body {
   margin: 0 auto;
 
-  background-color: #FFFFFF;
+  background-color: $white;
 
   @include PTMono-style(16px, normal, 22px, #666666, left, none)
 }

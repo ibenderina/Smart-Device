@@ -1,6 +1,7 @@
 @import "fonts";
-@import "common";
+@import "variables";
 @import "mixin";
+@import "common";
 @import "blocks/wrapper";
 @import "blocks/header";
 @import "blocks/contacts-list";
@@ -17,7 +18,7 @@
 @import "blocks/site-sections";
 @import "blocks/contacts";
 @import "blocks/copyright";
-
+@import "blocks/master-block";
 
 
 
