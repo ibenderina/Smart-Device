@@ -23,3 +23,9 @@
   background-position: 100%;
   background-size: contain;
 }
+
+@mixin pseudoClass() {
+  content: "";
+  position: absolute;
+  display: block;
+}

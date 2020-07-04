@@ -25,7 +25,7 @@
     height: 18.67px;
     top: 5px;
 
-    background-image: url("../../img/mail.png");
+    background-image: url("../../img/mail.svg");
   }
 
   &:last-of-type:before {
@@ -33,12 +33,7 @@
     height: 22.61px;
     top: 0;
 
-    background-image: url("../../img/phone.png");
-  }
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid;
+    background-image: url("../../img/phone-call.svg");
   }
 }
 

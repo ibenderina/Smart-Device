@@ -2,24 +2,34 @@
   background-color: $dark-background;
 }
 
+.services__wrapper {
+  padding: 50px 14px 33px 16px;
+}
+
 .services__description {
-  @include Roboto-style(36px, normal, 57px, $white, left, none);
+  padding: 0 5px 43px 9px;
+  margin: 0;
+
+  @include Roboto-style(28px, normal, 140.62%, $white, left, none);
 }
 
 .services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
 }
 
 .services__item {
   position: relative;
-  width: 370px;
-  height: 620px;
-}
-
-.services__item {
-  display: inline-flex;
-
-  @include backImage();
+  background-position: 100%;
+  background-size: cover;
+  width: 100%;
+  height: 255px;
+  margin-bottom: 31px;
 
   &--production {
     background-image: url("../../img/service1.png");
@@ -32,14 +42,206 @@
   &--kits {
     background-image: url("../../img/service3.png");
   }
+
+  &:before {
+    @include pseudoClass();
+    background-color: $blue;
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &:after {
+    @include pseudoClass();
+    @include backImage();
+
+    width: 18px;
+    height: 10px;
+    bottom: 26px;
+    right: 28px;
+    z-index: 1;
+
+    background-image: url("../../img/service-link.svg");
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .services__item {
+    &--production {
+      background-image: url("../../img/service12x.png");
+    }
+
+    &--mounting {
+      background-image: url("../../img/service22x.png");
+    }
+
+    &--kits {
+      background-image: url("../../img/service32x.png");
+    }
+  }
 }
 
 .services__item-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
   text-decoration: none;
-  z-index: 10;
+  color: white;
 }
 
 .services__item-text {
-  @include Roboto-style(30px, normal, 20px, $white, left, none);
-  z-index: 10;
+  margin: 0;
+  padding: 19px 70px 0 34px;
+
+  @include Roboto-style(20px, normal, 30px, $white, left, none);
 }
+
+.services__item--kits .services__item-text {
+  padding: 30px 90px 0 34px;
+}
+
+@media (min-width: 500px) {
+  .services__wrapper {
+    padding: 50px 50px 33px 50px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .services__wrapper {
+    padding: 52px 26px 33px 26px;
+  }
+
+  .services__description {
+    padding: 0 100px 47px 0;
+
+    @include Roboto-style(32px, normal, 45px, $white, left, none);
+  }
+
+  .services__item {
+    margin-bottom: 47px;
+
+    &--production {
+      background-image: url("../../img/service1-tablet.png");
+    }
+
+    &--mounting {
+      background-image: url("../../img/service2-tablet.png");
+    }
+
+    &--kits {
+      background-image: url("../../img/service3-tablet.png");
+    }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .services__item {
+      &--production {
+        background-image: url("../../img/service12x-tablet.png");
+      }
+
+      &--mounting {
+        background-image: url("../../img/service22x-tablet.png");
+      }
+
+      &--kits {
+        background-image: url("../../img/service32x-tablet.png");
+      }
+    }
+  }
+
+  .services__item-text {
+    padding: 40px 490px 0 43px;
+  }
+
+  .services__item--kits .services__item-text {
+    padding: 50px 500px 0 43px;
+  }
+}
+
+@media (min-width: 900px) {
+  .services__wrapper {
+    padding: 50px 70px 33px 70px;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services__description {
+    @include Roboto-style(36px, normal, 57px, $white, left, none);
+  }
+
+  .services__item {
+    width: 30%;
+    max-width: 416px;
+    height: 527px;
+
+    &--production {
+      background-image: url("../../img/service1-desktop.png");
+    }
+
+    &--mounting {
+      background-image: url("../../img/service2-desktop.png");
+    }
+
+    &--kits {
+      background-image: url("../../img/service3-desktop.png");
+    }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .services__item {
+      &--production {
+        background-image: url("../../img/service12x-desktop.png");
+      }
+
+      &--mounting {
+        background-image: url("../../img/service22x-desktop.png");
+      }
+
+      &--kits {
+        background-image: url("../../img/service32x-desktop.png");
+      }
+    }
+  }
+
+  .services__item-text {
+    padding: 40px 60px 0 43px;
+  }
+
+  .services__item--kits .services__item-text {
+    padding: 40px 80px 0 43px;
+  }
+}
+
+@media (min-width: $mega-desktop-width) {
+  .services__wrapper {
+    max-width: 1171px;
+    padding: 86px 0 81px 0;
+  }
+
+  .services__item {
+    width: 370px;
+    height: 620px;
+  }
+
+  .services__item-text {
+    padding: 52px 137px 0 43px;
+  }
+
+  .services__item--kits .services__item-text {
+    padding: 53px 166px 0 43px;
+  }
+}
+
+
+

@@ -1,0 +1,29 @@
+.test {
+  background-color: blue;
+}
+
+.test-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 700px;
+  height: a;
+  list-style-type: none;
+}
+
+.test-ul-li {
+  width: 200px;
+  height: 200px;
+}
+
+.test-h2 {
+  color: white;
+}
+
+.test-a {
+  background-image: url("../../img/service1.png");
+  background-color: #00b2ff;
+  @include backImage();
+  width: 200px;
+  height: 200px;
+}

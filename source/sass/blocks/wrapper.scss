@@ -1,15 +1,4 @@
 .wrapper {
   margin: 0 auto;
-}
-
-@media (min-width: $tablet-width) {
-  .wrapper {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .wrapper {
-    max-width: 1920px;
-  }
+  max-width: 1920px;
 }

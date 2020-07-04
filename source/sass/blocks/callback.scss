@@ -1,24 +1,37 @@
 .callback {
-  position: relative;
-  padding: 0;
-
   background-color: $blue;
-
-  &:before {
-    content: "";
-
-    position: absolute;
-    display: block;
-    width: 511px;
-    height: 288px;
-    top: 0;
-    left: 0;
-
-    @include backImage();
-    background-image: url("../../img/plane.png");
-  }
 }
 
 .callback__wrapper {
-  padding-left: 50%;
+  max-width: 1024px;
+}
+
+@media (min-width: $desktop-width) {
+  .callback__wrapper {
+    position: relative;
+
+    &:after {
+      @include pseudoClass();
+      @include backImage();
+      background-image: url("../../img/plane.png");
+      width: 467px;
+      height: 324px;
+      top: 179px;
+      left: 0;
+    }
+  }
+
+  .callback__form {
+    width: 50%;
+    padding-left: 500px;
+  }
+}
+
+@media (min-width: $mega-desktop-width) {
+  .callback__wrapper:after {
+    width: 511px;
+    height: 288px;
+    top: 128px;
+    left: -63px;
+  }
 }

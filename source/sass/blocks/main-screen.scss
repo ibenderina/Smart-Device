@@ -22,6 +22,7 @@
 }
 
 .main-screen__headline {
+  position: relative;
   margin-bottom: 27px;
 
   @include Roboto-style(40px, bold, 48px, $white, left, uppercase);
@@ -37,6 +38,7 @@
   font-size: 16px;
   line-height: 156.8%;
   color: $white;
+  text-transform: lowercase;
 
   &:before {
     position: absolute;
@@ -51,7 +53,7 @@
   }
 }
 
-.main-screen__button {
+.main-screen__link {
   margin: 0 auto;
   padding: 16px 32px 18px 32px;
   display: block;
@@ -59,6 +61,8 @@
   border: none;
   background-color: $blue;
   border-radius: 5px;
+
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -70,7 +74,11 @@
   }
 }
 
-.main-screen__button-text {
+.main-screen__scroll {
+  display: none;
+}
+
+.main-screen__link-text {
   @include Roboto-style(16px, bold, 21px, $white, center, uppercase);
   letter-spacing: 0.05em;
 
@@ -112,6 +120,7 @@
   .main-screen {
     padding: 51px 0 163px 0;
     margin: 0;
+    background-position: 103% 12%;
   }
 
   .main-screen__image {
@@ -135,7 +144,7 @@
     line-height: 156.8%;
   }
 
-  .main-screen__button-text {
+  .main-screen__link-text {
     &--tablet {
       display: block;
     }
@@ -192,6 +201,7 @@
 
 @media (min-width: $mega-desktop-width) {
   .main-screen {
+    position: relative;
     padding: 141px 0 275px 249px;
 
     background-position: 85% 61%;
@@ -211,17 +221,40 @@
     margin-top: 0;
     padding: 19px 0 44px 99px;
 
-    text-transform: lowercase;
-
     &:before {
       width: 65px;
       top: 36px;
     }
   }
 
-  .main-screen__button {
+  .main-screen__link {
     margin: 0 auto 0 97px;
     padding: 16px 45px 18px 47px;
+    max-width: 317px;
+  }
+
+  .main-screen__scroll {
+    display: inline-block;
+    position: absolute;
+    bottom: 129px;
+    left: 216px;
+
+    transform: rotate(-90deg);
+    opacity: 0.5;
+
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

@@ -1,10 +1,46 @@
+.benefits {
+  padding: 36px 16px 20px 14px;
+  max-width: 1170px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .benefits__list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
 }
 
 .benefits__list-item {
   position: relative;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 71px 25px 24px 25px;
+  margin-bottom: 20px;
+
   border-left: 3px solid $blue;
+  border-top: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+
+  &:nth-child(2) {
+    padding-right: 10px;
+  }
+
+  &:nth-child(3) {
+    padding-top: 64px;
+  }
+
+  &:nth-child(4) {
+    padding-top: 67px;
+    padding-right: 21px;
+    padding-bottom: 28px;
+  }
 }
 
 .benefits__list-item:hover,
@@ -26,42 +62,155 @@
 
     position: absolute;
     display: block;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 23px;
 
     @include backImage();
   }
 
   &--watch::before {
-    width: 29px;
-    height: 35px;
+    width: 29.28px;
+    height: 35.46px;
 
     background-image: url("../../img/watch.svg");
   }
 
   &--people::before {
-    width: 35px;
-    height: 35px;
+    width: 31.61px;
+    height: 32.18px;
 
     background-image: url("../../img/people.svg");
   }
 
   &--man::before {
-    width: 36px;
-    height: 31px;
+    width: 30.2px;
+    height: 26.1px;
 
     background-image: url("../../img/man.svg");
   }
 
   &--money::before {
-    width: 35px;
-    height: 35px;
+    width: 32.18px;
+    height: 32.18px;
 
     background-image: url("../../img/money.svg");
   }
 }
 
 .benefits__item-headline {
-  @include Roboto-style(24px, normal, 38px, $blue, left, none);
+  margin: 0;
+
+  @include Roboto-style(20px, normal, 140.62%, $blue, left, none);
 }
+
+.benefits__item-description {
+  margin: 0;
+  padding-top: 9px;
+}
+
+@media (min-width: 500px) {
+  .benefits {
+    padding: 36px 50px 20px 50px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .benefits {
+    padding: 56px 23px 20px 25px;
+  }
+
+  .benefits__list {
+    justify-content: start;
+    margin-right: -30px;
+    margin-bottom: -31px;
+  }
+
+  .benefits__list-item {
+    width: 46%;
+    padding: 64px 25px 17px 25px;
+    margin-right: 30px;
+    margin-bottom: 31px;
+
+    &:nth-child(2) {
+      padding-right: 19px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 60px;
+      padding-right: 20px;
+    }
+
+    &:nth-child(4) {
+      padding-top: 61px;
+      padding-bottom: 33px;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      display: block;
+      top: 24px;
+      left: 24px;
+
+      @include backImage();
+    }
+
+    &--watch::before {
+      width: 29px;
+      height: 35px;
+
+      background-image: url("../../img/watch.svg");
+    }
+
+    &--people::before {
+      width: 35px;
+      height: 35px;
+
+      background-image: url("../../img/people.svg");
+    }
+
+    &--man::before {
+      width: 36px;
+      height: 31px;
+
+      background-image: url("../../img/man.svg");
+    }
+
+    &--money::before {
+      width: 35px;
+      height: 35px;
+
+      background-image: url("../../img/money.svg");
+    }
+  }
+
+  .benefits__item-headline {
+    @include Roboto-style(24px, normal, 38px, $blue, left, none);
+  }
+
+  .benefits__item-description {
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey-brown;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .benefits {
+    padding: 56px 70px 70px 70px;
+  }
+}
+
+@media (min-width: $mega-desktop-width) {
+  .benefits {
+    padding: 56px 70px 70px 70px;
+  }
+
+  .benefits__list-item {
+    padding: 98px 42px 49px 44px;
+    height: max-content;
+  }
+}
+
 

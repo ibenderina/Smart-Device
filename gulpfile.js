@@ -9,12 +9,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
 const del = require("del");
-const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify");
-const pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -37,7 +32,6 @@ gulp.task("images", function () {
   return gulp.src("source/img/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
   .pipe(gulp.dest("build/img"));
@@ -55,19 +49,20 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
-  gulp.watch("source/*.html", gulp.series("minify-html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("minify-js", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/logo-*.svg",
-    "source/*.ico"
+    "source/*.ico",
   ], {
     base: "source"
   })
   .pipe(gulp.dest("build"));
+
 });
 
 gulp.task("clean", function () {
@@ -79,25 +74,22 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("minify-html", function () {
-  return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(htmlmin({
-    removeComments: true,
-    collapseWhitespace: true
-  }))
+gulp.task("html", function () {
+  return gulp.src([
+    "source/*.html",
+  ], {
+    base: "source"
+  })
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("minify-js", function () {
-  return pipeline(
-    gulp.src("source/js/*.js"),
-    uglify(),
-    rename("script.min.js"),
-    gulp.dest("build/js")
-  );
+gulp.task("js", function () {
+  return gulp.src([
+    "source/js/*.js",
+  ], {
+    base: "source/js"
+  })
+  .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("build", gulp.series(
@@ -105,7 +97,7 @@ gulp.task("build", gulp.series(
   "images",
   "webp",
   "css",
+  "html",
   "copy",
-  "minify-js",
-  "minify-html"));
+  "js"));
 gulp.task("start", gulp.series("build", "server"));
