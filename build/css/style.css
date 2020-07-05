@@ -222,12 +222,6 @@ input[type="checkbox"].visually-hidden {
     .main-screen {
       background-image: url("../../img/boards-mobile2x.png"); } }
 
-.main-screen__image {
-  display: none;
-  width: 301px;
-  height: 220px;
-  padding-left: 19px; }
-
 .main-screen__text-wrapper {
   padding: 0 15px 0 16px; }
 
@@ -269,7 +263,8 @@ input[type="checkbox"].visually-hidden {
   border: none;
   background-color: #00B2FF;
   border-radius: 5px;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
   .main-screen__link:hover, .main-screen__link:focus {
     box-shadow: 0 0 14px 3px #00B2FF; }
   .main-screen__link:active {
@@ -295,10 +290,6 @@ input[type="checkbox"].visually-hidden {
     background-position: center top; }
   .main-screen__text-wrapper {
     padding: 0 30px 0 30px; } }
-
-@media (min-width: 400px) {
-  .main-screen {
-    background-position: center top; } }
 
 @media (min-width: 600px) {
   .main-screen {
@@ -333,6 +324,8 @@ input[type="checkbox"].visually-hidden {
     margin-bottom: 55px;
     font-size: 18px;
     line-height: 156.8%; }
+  .main-screen__link {
+    max-width: 317px; }
   .main-screen__link-text--tablet {
     display: block; }
   .main-screen__link-text--mobile {
@@ -1400,6 +1393,33 @@ input[type="checkbox"].visually-hidden {
   background-image: url("../../img/background-desktop.png");
   background-position: center;
   background-size: contain; }
+
+.master-block__wrapper {
+  background-image: url(../../img/rect-main-mobile.svg);
+  background-position: right top;
+  background-size: 322px 520px;
+  background-repeat: no-repeat; }
+
+@media (min-width: 600px) {
+  .master-block__wrapper {
+    background-image: url(../../img/rect-main-tablet.svg);
+    background-position: right top;
+    background-size: 761px 562px; } }
+
+@media (min-width: 1024px) {
+  .master-block__wrapper {
+    background-image: url(../../img/rect-main-desktop.svg);
+    background-position: 64% 100%;
+    background-size: 1900px 916px; } }
+
+@media (min-width: 1157px) {
+  .master-block__wrapper {
+    background-position: 64% 63%; } }
+
+@media (min-width: 1920px) {
+  .master-block__wrapper {
+    background-position: 64% 24%;
+    background-size: 1900px 892px; } }
 
 .test {
   background-color: blue; }

@@ -4,3 +4,39 @@
   background-position: center;
   background-size: contain;
 }
+
+.master-block__wrapper {
+  background-image: url(../../img/rect-main-mobile.svg);
+  background-position: right top;
+  background-size: 322px 520px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 600px) {
+  .master-block__wrapper {
+    background-image: url(../../img/rect-main-tablet.svg);
+    background-position: right top;
+    background-size: 761px 562px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .master-block__wrapper {
+    background-image: url(../../img/rect-main-desktop.svg);
+    background-position: 64% 100%;
+    background-size: 1900px 916px;
+  }
+}
+
+@media (min-width: 1157px) {
+  .master-block__wrapper {
+    background-position: 64% 63%;
+  }
+}
+
+@media (min-width: $mega-desktop-width) {
+  .master-block__wrapper {
+    background-position: 64% 24%;
+    background-size: 1900px 892px;
+  }
+}
