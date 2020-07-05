@@ -1,7 +1,7 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 46%;
   justify-content: start;
   padding: 32px 0 0 0;
   margin: 0 auto;
@@ -11,3 +11,40 @@
 .social-list__item {
   margin: 0 auto;
 }
+
+.social-list__image {
+  &:hover,
+  &:focus {
+    filter: brightness(0);
+  }
+
+  &:active {
+    opacity: 0.5;
+  };
+}
+
+@media (min-width: 600px) {
+  .social-list {
+    width: 30%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    flex-grow: 0.5;
+  }
+}
+
+@media (min-width: 1500px) {
+  .social-list {
+      margin-top: 48px;
+  }
+
+  .social-list__item {
+    margin: 0 17px 0 0;
+  }
+}
+

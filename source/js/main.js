@@ -1,5 +1,5 @@
 const ClassName = {
-  INFO_MENU: `.info-menu`,
+  INFO_MENU: `.info-menu__wrapper`,
   INFO_MENU_HEADLINE: `.info-menu__headline`,
   INFO_MENU_LIST: `.info-menu__list`,
   COLLAPSED_BLOCK: `info-menu--collapsed`,
@@ -11,6 +11,8 @@ const ClassName = {
 };
 
 const DEVICE_SIZE = 768;
+
+const ESC = `Escape`;
 
 (function () {
   const hideElement = (element) => {
@@ -27,7 +29,7 @@ const DEVICE_SIZE = 768;
       return;
     }
     window.addEventListener(`resize`, function (evt) {
-      if (innerWidth <= DEVICE_SIZE) {
+      if (innerWidth < DEVICE_SIZE) {
         hideElement(element);
       } else {
         showElement(element);
@@ -35,7 +37,7 @@ const DEVICE_SIZE = 768;
     });
 
     selectorHeadline.addEventListener(`click`, function () {
-      if (innerWidth <= DEVICE_SIZE) {
+      if (innerWidth < DEVICE_SIZE) {
         if (element.classList.contains(ClassName.COLLAPSED_BLOCK)) {
           showElement(element);
         } else {
@@ -50,7 +52,6 @@ const DEVICE_SIZE = 768;
     const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
 
     if (callbackButton) {
-      console.log(222);
       callbackButton.addEventListener(`click`, function () {
         if (callbackWindow) {
           callbackWindow.classList.add(ClassName.ACTIVE_CALLBACK_WINDOW)
@@ -59,7 +60,7 @@ const DEVICE_SIZE = 768;
     }
 
     window.addEventListener(`keydown`, function (evt) {
-      if (evt.key === `Escape`) {
+      if (evt.key === ESC) {
         const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
         callbackWindow.classList.remove(ClassName.ACTIVE_CALLBACK_WINDOW)
       }
@@ -70,7 +71,6 @@ const DEVICE_SIZE = 768;
     const closeButton = document.querySelector(ClassName.CLOSE_BUTTON);
     const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
     if (closeButton) {
-      console.log(555);
       closeButton.addEventListener(`click`, function () {
         callbackWindow.classList.remove(ClassName.ACTIVE_CALLBACK_WINDOW)
       });
