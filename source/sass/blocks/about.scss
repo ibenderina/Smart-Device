@@ -49,7 +49,7 @@
 
 @media (min-width: 500px) {
   .about {
-    padding: 18px 40px 25px 40px;
+    padding: 18px 40px 68px 40px;
   }
 }
 
@@ -59,12 +59,12 @@
     padding: 36px 35px 95px 212px;
 
     background-image: url("../../img/2005.png");
-    background-position: -2% 47%;
+    background-position: -2% 33%;
     background-size: 261px 351px;
     background-repeat: no-repeat;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../../img/20052x.png");
+      background-image: url("../../img/2005-2x.png");
     }
   }
 
@@ -82,20 +82,36 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $desktop-width) {
   .about {
-    padding: 36px 70px 60px 312px;
+    padding: 36px 70px 103px 312px;
 
-    background-position: 8% 47%;
+    background-position: 8% 33%;
   }
 }
 
 @media (min-width: $mega-desktop-width) {
   .about {
+    position: relative;
     padding: 36px 70px 60px 312px;
 
     background-position: 8% 47%;
     background-size: 317px 220px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 350px;
+      height: 516px;
+      top: 0;
+      left: 0;
+
+      background-image: url(../../img/rect-2005-left-desktop.svg);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   .about__description-more {

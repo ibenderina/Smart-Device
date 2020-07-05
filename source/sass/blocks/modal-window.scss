@@ -47,3 +47,13 @@
 .modal-window__form .form__text {
   @include Roboto-style(28px, normal, 39px, $white, left, none);
 }
+
+.modal-window .form__nav-submit-button {
+  display: block;
+  width: 100%;
+}
+
+.modal-window .form__nav-privacy-label {
+  display: block;
+  width: 100%;
+}
