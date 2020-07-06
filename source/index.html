@@ -126,20 +126,20 @@
         <form class="callback__form form">
           <p class="form__text">Остались вопросы? Задайте их нам!</p>
           <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-          <div class="form__block form__block--mod">
-            <label class="form__label">
+          <div class="form__block">
+            <label class="form__label" for="name">
               <input class="form__input" type="text" placeholder="Имя" name="name" id="name">
             </label>
-            <label class="form__label">
+            <label class="form__label" for="phone">
               <input class="form__input" type="text" placeholder="Телефон" name="phone" id="phone">
             </label>
-            <label class="form__label form__label--mod">
-              <textarea class="form__input" type="" placeholder="Ваш вопрос" name="text" id="text"></textarea>
+            <label class="form__label form__label--textarea" for="text">
+              <textarea class="form__input" placeholder="Ваш вопрос" name="text" id="text"></textarea>
             </label>
           </div>
           <div class="form__nav">
             <button class="form__nav-submit-button" type="submit">Задать вопрос</button>
-            <label class="form__nav-privacy-label">
+            <label class="form__nav-privacy-label" for="privacy">
               <input class="form__nav-privacy-checkbox visually-hidden" type="checkbox" name="user_privacy" id="privacy">
               <span class="form__nav-privacy-description">Я согласен на обработку  персональных данных</span>
             </label>
@@ -168,7 +168,7 @@
       <div class="form__nav">
         <button class="form__nav-submit-button" type="submit">Задать вопрос</button>
         <label class="form__nav-privacy-label">
-          <input class="form__nav-privacy-checkbox visually-hidden" type="checkbox" name="user_privacy" id="privacy">
+          <input class="form__nav-privacy-checkbox visually-hidden" type="checkbox" name="user_privacy" id="user_privacy">
           <span class="form__nav-privacy-description">Я согласен на обработку  персональных данных</span>
         </label>
       </div>

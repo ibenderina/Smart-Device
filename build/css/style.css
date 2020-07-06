@@ -756,7 +756,7 @@ input[type="checkbox"].visually-hidden {
 
 @media (min-width: 768px) {
   .callback__wrapper .form {
-    padding: 31px 40px 39px 40px; } }
+    padding: 81px 85px 104px 91px; } }
 
 @media (min-width: 1024px) {
   .callback__wrapper {
@@ -795,22 +795,26 @@ input[type="checkbox"].visually-hidden {
     left: -18%;
     top: 25%; }
   .callback__wrapper:before {
-    width: 636px;
-    height: 636px;
-    left: -18%;
-    top: 25%; } }
-
-@media (min-width: 1920px) {
-  .callback__wrapper:after {
-    width: 511px;
-    height: 288px;
-    top: 128px;
-    left: -158px; }
-  .callback__wrapper:before {
     width: 1636px;
     height: 1636px;
-    left: -113%;
+    left: -105%;
     top: -30%; } }
+
+@media (min-width: 1920px) {
+  .callback__wrapper {
+    max-width: 1500px; }
+    .callback__wrapper:after {
+      width: 511px;
+      height: 288px;
+      top: 162px;
+      left: 138px; }
+    .callback__wrapper:before {
+      width: 1936px;
+      height: 1636px;
+      left: -72%;
+      top: -27%; }
+  .callback__wrapper .form {
+    padding: 90px 0 110px 762px; } }
 
 .form {
   padding: 31px 14px 39px 15px; }
@@ -843,6 +847,8 @@ input[type="checkbox"].visually-hidden {
 .form__input {
   padding: 14px 14px 20px 14px;
   resize: none;
+  box-sizing: border-box;
+  width: 100%;
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
   font-family: "PT Mono", "Arial", sans-serif;
@@ -874,6 +880,9 @@ input[type="checkbox"].visually-hidden {
     background-color: transparent; }
   .form__input:hover, .form__input:focus {
     background-color: rgba(229, 242, 255, 0.3); }
+
+.form__label--textarea .form__input {
+  min-height: 108px; }
 
 .form__nav-submit-button {
   margin: 0 auto;
@@ -938,6 +947,68 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center; }
+
+@media (min-width: 500px) {
+  .form {
+    padding: 31px 40px 39px 40px; } }
+
+@media (min-width: 768px) {
+  .form__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .form__text {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 32px;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-align: left; }
+  .form__description {
+    padding-bottom: 53px; }
+  .form__label:not(.form__label--textarea) {
+    margin-bottom: 39px;
+    width: 47%; }
+  .form__label--textarea .form__input {
+    min-height: 159px; }
+  .form__nav {
+    padding: 14px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .form__nav-submit-button {
+    width: 47%;
+    margin: 0; }
+  .form__nav-privacy-label {
+    width: 36%;
+    padding: 10px 23px 0 34px; }
+  .form__nav-privacy-checkbox + .form__nav-privacy-description::before {
+    top: 10px; }
+  .form__nav-privacy-checkbox:checked + .form__nav-privacy-description::after {
+    top: 14px;
+    left: 3px; } }
+
+@media (min-width: 1920px) {
+  .form__text {
+    padding-bottom: 5px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 36px;
+    line-height: 57px;
+    color: #FFFFFF;
+    text-align: left; }
+  .form__block {
+    max-width: 574px; }
+  .form__label:not(.form__label--textarea) {
+    margin-bottom: 40px; }
+  .form__input {
+    padding: 13px 19px 14px 19px; }
+  .form__label--textarea .form__input {
+    min-height: 153px; }
+  .form__nav {
+    max-width: 572px; } }
 
 .modal-window {
   display: none;
@@ -1487,32 +1558,5 @@ input[type="checkbox"].visually-hidden {
   .master-block__wrapper {
     background-position: 64% 24%;
     background-size: 1900px 892px; } }
-
-.test {
-  background-color: blue; }
-
-.test-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 700px;
-  height: a;
-  list-style-type: none; }
-
-.test-ul-li {
-  width: 200px;
-  height: 200px; }
-
-.test-h2 {
-  color: white; }
-
-.test-a {
-  background-image: url("../../img/service1.png");
-  background-color: #00b2ff;
-  background-repeat: no-repeat;
-  background-position: 100%;
-  background-size: contain;
-  width: 200px;
-  height: 200px; }
 
 /*# sourceMappingURL=style.css.map */

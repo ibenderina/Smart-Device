@@ -8,7 +8,7 @@
 
 @media (min-width: $tablet-width) {
   .callback__wrapper .form {
-    padding: 31px 40px 39px 40px;
+    padding: 81px 85px 104px 91px;
   }
 }
 
@@ -57,324 +57,33 @@
     }
 
     &:before {
-      width: 636px;
-      height: 636px;
-      left: -18%;
-      top: 25%;
+      width: 1636px;
+      height: 1636px;
+      left: -105%;
+      top: -30%;
     }
   }
 }
 
 @media (min-width: $mega-desktop-width) {
   .callback__wrapper {
+    max-width: 1500px;
     &:after {
       width: 511px;
       height: 288px;
-      top: 128px;
-      left: -158px;
+      top: 162px;
+      left: 138px;
     }
 
     &:before {
-      width: 1636px;
+      width: 1936px;
       height: 1636px;
-      left: -113%;
-      top: -30%;
+      left: -72%;
+      top: -27%;
     }
   }
+
+  .callback__wrapper .form {
+    padding: 90px 0 110px 762px;
+  }
 }
-
-
-
-
-
-
-
-
-
-//.form {
-//  padding: 31px 14px 39px 15px;
-//}
-//
-//.form__fieldset {
-//  padding: 0 56px 0 0;
-//  border: none;
-//}
-//
-//.form__text {
-//  margin: 0;
-//  padding-bottom: 13px;
-//
-//  @include Roboto-style(28px, normal, 140.62%, $white, left, none);
-//}
-//
-//.form__description {
-//  margin: 0;
-//  padding-bottom: 24px;
-//
-//  color: $white;
-//}
-//
-//.form__input {
-//  padding: 14px 40px 20px 14px;
-//  margin-bottom: 25px;
-//  width: 100%;
-//
-//  background-color: rgba(229, 242, 255, 0.1);
-//  border: none;
-//
-//  @include PTMono-style(16px, normal, 22px, $white, left, none);
-//
-//  &::placeholder {
-//    color: $white;
-//    font-size: 16px;
-//    line-height: 22px;
-//
-//    background-color: transparent;
-//  }
-//
-//  &:hover,
-//  &:focus {
-//    background-color: rgba(229, 242, 255, 0.3);
-//  }
-//}
-//
-//.form__label--mod .form__input {
-//  padding: 14px 40px 51px 14px;
-//  margin-bottom: 22px;
-//  resize: none;
-//}
-//
-//.form__nav-submit-button {
-//  margin: 0 auto;
-//  padding: 13px 0 13px 0;
-//  width: 100%;
-//  max-width: 400px;
-//  display: block;
-//
-//  background-color: transparent;
-//  border: 1px solid $white;
-//  box-sizing: border-box;
-//  border-radius: 5px;
-//
-//  @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
-//  letter-spacing: 0.05em;
-//
-//  &:hover,
-//  &:focus {
-//    background-color: $white;
-//    border-color: $white;
-//    color: $blue;
-//  }
-//
-//  &:active {
-//    background-color: $active-blue;
-//    border-color: $active-blue;
-//  }
-//}
-//
-//.form__nav-privacy-label {
-//  display: inline-block;
-//  padding: 30px 61px 0 34px;
-//  position: relative;
-//
-//  font-size: 14px;
-//  line-height: 16px;
-//  color: $white;
-//  opacity: 0.8;
-//}
-//
-//.form__nav-privacy-description {
-//  padding: 0 0 0 0;
-//}
-//
-//.form__nav-privacy-checkbox + .form__nav-privacy-description::before {
-//  content: "";
-//  display: inline-block;
-//  vertical-align: middle;
-//  position: absolute;
-//  top: 32px;
-//  left: 0;
-//  width: 15px;
-//  height: 14px;
-//  margin-right: 17px;
-//
-//  border: solid 1px $white;
-//}
-//
-//.form__nav-privacy-checkbox:checked + .form__nav-privacy-description::after {
-//  content: "";
-//  display: inline-block;
-//  vertical-align: middle;
-//  position: absolute;
-//  top: 37px;
-//  left: 3px;
-//  width: 10px;
-//  height: 6px;
-//
-//  background-image: url("../../img/checked.svg");
-//  background-repeat: no-repeat;
-//  background-size: contain;
-//  background-position: center;
-//}
-//
-//@media (min-width: $tablet-width) {
-//
-//  .form__text {
-//    padding: 0;
-//    @include Roboto-style(32px, normal, 45px, $white, left, none);
-//  }
-//
-//  .form__description {
-//    padding: 15px 0 55px 6px;
-//  }
-//
-//  .form__block--mod {
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: space-between;
-//    padding: 0 0 39px 5px;
-//    margin: 0;
-//  }
-//
-//  .form__block--mod .form__label {
-//    display: inline-block;
-//    box-sizing: border-box;
-//    width: 47%;
-//  }
-//
-//  .form__label {
-//    width: 100%;
-//  }
-//
-//  .form__block--mod .form__label--mod {
-//    width: 100%;
-//  }
-//
-//  .form__label--mod .form__input {
-//    padding: 12px 17px 12px 17px;
-//    min-height: 159px;
-//    margin: 0;
-//  }
-//
-//  .form__input {
-//    box-sizing: border-box;
-//    padding: 14px 16px 15px 16px;
-//    margin-bottom: 42px;
-//  }
-//
-//  .form__nav {
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: space-between;
-//    align-items: center;
-//  }
-//
-//  .form__nav-submit-button {
-//    display: inline-block;
-//    margin: 0;
-//    width: 48%;
-//  }
-//
-//  .form__nav-privacy-label {
-//    display: inline-block;
-//    padding: 0 0 0 30px;
-//    width: 45%;
-//    box-sizing: border-box;
-//  }
-//
-//  .form__nav-privacy-checkbox + .form__nav-privacy-description::before {
-//    top: 2px;
-//    left: -4px;
-//  }
-//
-//  .form__nav-privacy-checkbox:checked + .form__nav-privacy-description::after {
-//    top: 8px;
-//    left: -1px;
-//  }
-//}
-//
-//
-//.callback {
-//  background-color: $blue;
-//}
-//
-//.callback__wrapper {
-//  max-width: 1024px;
-//}
-//
-//@media (min-width: $tablet-width) {
-//  .callback__wrapper .form {
-//    padding: 31px 40px 39px 40px;
-//  }
-//}
-//
-//@media (min-width: $desktop-width) {
-//  .callback__wrapper {
-//    position: relative;
-//
-//    &:after {
-//      @include pseudoClass();
-//      @include backImage();
-//      background-image: url("../../img/plane.png");
-//      width: 373px;
-//      height: 293px;
-//      top: 121px;
-//      left: 19px;
-//    }
-//
-//    &:before {
-//      position: absolute;
-//      content: "";
-//      display: block;
-//      width: 1100px;
-//      top: -5%;
-//      left: -56%;
-//      height: 816px;
-//
-//      background-image: url(../../img/rect-main-desktop.svg);
-//      background-position: top;
-//      background-repeat: no-repeat;
-//      background-size: contain;
-//    }
-//  }
-//
-//  .callback__wrapper .form {
-//    padding: 31px 40px 39px 400px;
-//  }
-//}
-//
-//@media (min-width: 1500px) {
-//  .callback__wrapper {
-//    &:after {
-//      width: 511px;
-//      height: 288px;
-//      left: -18%;
-//      top: 25%;
-//    }
-//
-//    &:before {
-//      width: 636px;
-//      height: 636px;
-//      left: -18%;
-//      top: 25%;
-//    }
-//  }
-//}
-//
-//@media (min-width: $mega-desktop-width) {
-//  .callback__wrapper {
-//    &:after {
-//      width: 511px;
-//      height: 288px;
-//      top: 128px;
-//      left: -158px;
-//    }
-//
-//    &:before {
-//      width: 1636px;
-//      height: 1636px;
-//      left: -113%;
-//      top: -30%;
-//    }
-//  }
-//}
