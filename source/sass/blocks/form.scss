@@ -21,10 +21,15 @@
   color: $white;
 }
 
-.form__input {
-  padding: 14px 40px 20px 14px;
-  margin-bottom: 25px;
+.form__label {
+  display: block;
   width: 100%;
+  margin-bottom: 25px;
+}
+
+.form__input {
+  padding: 14px 14px 20px 14px;
+  resize: none;
 
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
@@ -43,12 +48,6 @@
   &:focus {
     background-color: rgba(229, 242, 255, 0.3);
   }
-}
-
-.form__label--mod .form__input {
-  padding: 14px 40px 51px 14px;
-  margin-bottom: 22px;
-  resize: none;
 }
 
 .form__nav-submit-button {
@@ -91,7 +90,7 @@
 }
 
 .form__nav-privacy-description {
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 .form__nav-privacy-checkbox + .form__nav-privacy-description::before {

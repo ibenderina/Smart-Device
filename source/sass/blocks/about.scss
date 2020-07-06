@@ -93,25 +93,34 @@
 @media (min-width: $mega-desktop-width) {
   .about {
     position: relative;
-    padding: 36px 70px 60px 312px;
+    padding: 31px 70px 121px 286px;
 
-    background-position: 8% 47%;
-    background-size: 317px 220px;
+    background-position: 7% 29%;
+    background-size: 217px 320px;
 
     &:before {
       position: absolute;
       content: "";
       display: block;
-      width: 350px;
-      height: 516px;
-      top: 0;
-      left: 0;
+      width: 550px;
+      height: 897px;
+      top: -83%;
+      left: -20%;
 
       background-image: url(../../img/rect-2005-left-desktop.svg);
       background-position: left;
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
+
+  .about__headline {
+    @include Roboto-style(36px, normal, 57px, $grey-brown, left, none);
+  }
+
+  .about__description {
+    padding-top: 18px;
+    padding-right: 54px;
   }
 
   .about__description-more {
