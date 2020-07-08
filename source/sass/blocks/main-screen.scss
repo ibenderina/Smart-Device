@@ -2,13 +2,13 @@
   position: relative;
   padding: 155px 0 275px 249px;
 
-  background-image: url("../../img/boards-mobile.png");
+  background-image: url("../../img/boards-desktop.png");
   background-position: 84% 63%;
   background-size: 685px 515px;
   background-repeat: no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../../img/boards-mobile2x.png");
+    background-image: url("../../img/boards-desktop2x.png");
   }
 }
 
@@ -32,7 +32,6 @@
   margin-bottom: 41px;
 
   font-size: 22px;
-  letter-spacing: -1px;
   line-height: 34px;
   color: $white;
   text-transform: lowercase;
@@ -76,7 +75,7 @@
   @include Roboto-style(16px, bold, 21px, $white, center, uppercase);
   letter-spacing: 0.05em;
 
-  &--tablet {
+  &--mobile {
     display: none;
   }
 }
@@ -122,54 +121,73 @@
   }
 }
 
-//@media (max-width: $mega-desktop-width - 1) {
-//  .main-screen {
-//      background-position: 100% 13%;
-//      background-size: 432px 532px;
-//    }
-//
-//  .main-screen__text-wrapper {
-//    padding: 0 273px 0 88px;
-//    margin: 0;
-//  }
-//
-//  .main-screen__headline {
-//    @include Roboto-style(80px, bold, 106px, $white, left, uppercase);
-//    letter-spacing: 0.07em;
-//  }
-//
-//  .main-screen__description {
-//    font-size: 22px;
-//    line-height: 34px;
-//    color: $white;
-//  }
-//}
+@media (max-width: $desktop-width) {
+  .main-screen {
+    background-position: 97% 41%;
+  }
+
+  .main-screen__text-wrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .main-screen {
+    padding: 69px 50px 162px 50px;
+    background-position: right 12%;
+    background-size: 390px 552px;
+
+    background-image: url("../../img/boards-tablet.png");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/boards-tablet2x.png");
+    }
+  }
+
+  .main-screen__text-wrapper {
+    max-width: 61%;
+    padding: 36px 0 0 88px;
+    margin: 0;
+  }
+
+  .main-screen__scroll {
+    display: none;
+  }
+}
 
 @media (max-width: $tablet-width) {
   .main-screen {
-    padding: 69px 0;
-    background-position: 170% 20%;
-    background-size: 469px 338px;
+    padding: 69px 0 162px 0;
+    background-position: right 12%;
+    background-size: 256px 352px;
+
+    background-image: url("../../img/boards-tablet.png");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/boards-tablet2x.png");
+    }
   }
-//
-//  .main-screen__image {
-//    display: none;
-//  }
-//
-  .main-screen__headline {
-    margin: 0;
-  }
+
   .main-screen__text-wrapper {
-    max-width: 56%;
-    padding: 41px 199px 0 88px;
+    max-width: 61%;
+    padding: 36px 0 0 88px;
     margin: 0;
   }
-//
+
+  .main-screen__link {
+    width: 126%;
+    margin-left: 4px;
+    padding: 16px 31px 18px 30px;
+  }
+
   .main-screen__headline {
-    @include Roboto-style(60px, bold, 70px, $white, left, uppercase);
+    margin: 0;
+    padding: 0;
+
+    @include Roboto-style(60px, bold, 73px, $white, left, uppercase);
     letter-spacing: 0.07em;
   }
-//
+
   .main-screen__description {
     margin-bottom: 11px;
     padding: 28px 0 44px 51px;
@@ -206,6 +224,30 @@
 }
 
 @media (max-width: $mobile-width) {
+  .main-screen {
+    padding: 229px 15px 71px 15px;
+    margin: 0;
+
+    background-image: url("../../img/boards-mobile.png");
+    background-position: center 6%;
+    background-size: 300px 240px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/boards-mobile2x.png");
+    }
+  }
+
+  .main-screen__text-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+
+  .main-screen__link {
+    margin: 0 auto;
+    width: auto;
+  }
+
   .main-screen__link-text {
     &--tablet {
       display: none;
@@ -214,5 +256,16 @@
     &--mobile {
       display: block;
     }
+  }
+
+  .main-screen__description {
+    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .main-screen__headline {
+    @include Roboto-style(40px, bold, 48px, $white, left, uppercase);
+    margin: 0;
   }
 }

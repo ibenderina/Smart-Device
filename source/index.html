@@ -25,20 +25,17 @@
   <h1 class="master-block__headline visually-hidden">Интернет-магазин печатных плат</h1>
   <div class="master-block__wrapper wrapper">
     <header class="master-block__header header">
-      <div class="header__logo-wrapper">
-        <a class="header__logo-link">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/brain.svg">
-            <img class="header__logo-image"
-                 src="img/logo-tablet.png"
-                 srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x"
-                 alt="Логотип сайта 'Smart Device'"
-                 width="52"
-                 height="52">
-          </picture>
-        </a>
-        <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
-      </div>
+      <a class="header__logo-link">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x">
+          <img class="header__logo-image"
+               src="img/brain.svg"
+               alt="Логотип сайта 'Smart Device'"
+               width="52"
+               height="52">
+        </picture>
+      </a>
+      <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
       <div class="header__contacts-list contacts-list">
         <a class="contacts-list__link contacts-list__link--mail" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
           <span class="contacts-list__item-text">info@sd.ru</span>

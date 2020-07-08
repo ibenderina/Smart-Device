@@ -24,6 +24,7 @@
   width: 37px;
   height: 13px;
   margin-top: 21px;
+  margin-left: 119px;
 
   background-color: transparent;
   border-top: 1px solid $white;
@@ -53,15 +54,13 @@
 
 @media (max-width: $tablet-width) {
   .header {
-    padding: 17px 18px 0 18px;
+    padding: 20px 24px 0;
   }
-  .header__logo-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    box-sizing: border-box;
-    padding: 3px 0 3px 7px;
+
+  .header__logo-link {
+    width: 79%;
   }
+
   .header__nav-toggle {
     margin-top: 17px;
   }
@@ -73,11 +72,13 @@
 
 @media (max-width: $mobile-width) {
   .header {
-    padding: 14px 16px 0 10px;
+    padding: 14px 16px 0 14px;
   }
 
   .header__nav-toggle {
     margin-top: 10px;
+    margin-left: 0;
+    width: 53px;
   }
 
   .header__logo-image {
