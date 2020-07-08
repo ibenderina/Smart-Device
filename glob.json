@@ -1,0 +1,6 @@
+{
+  "editorconfig-cli": [
+    "./source/js/**/*.js",
+    "./source/sass/**/*.{sass,scss}"
+  ]
+}

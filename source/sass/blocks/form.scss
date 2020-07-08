@@ -11,11 +11,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 574px;
 }
 
 .form__text {
   padding-bottom: 5px;
   margin: 0;
+
   @include Roboto-style(36px, normal, 57px, $white, left, none);
 }
 
@@ -30,6 +32,7 @@
   display: block;
   width: 100%;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .form__label:not(.form__label--textarea) {
@@ -38,13 +41,14 @@
 }
 
 .form__input {
-  padding: 14px 14px 20px 14px;
+  padding: 13px 19px 14px 19px;
   resize: none;
   box-sizing: border-box;
   width: 100%;
 
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
+  cursor: pointer;
 
   @include PTMono-style(16px, normal, 22px, $white, left, none);
 
@@ -63,11 +67,15 @@
 }
 
 .form__label--textarea .form__input {
-  min-height: 108px;
+  min-height: 153px;
 }
 
 .form__nav {
   max-width: 572px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 0 0;
 }
 
 .form__nav-submit-button {
@@ -79,6 +87,7 @@
   border: 1px solid $white;
   box-sizing: border-box;
   border-radius: 5px;
+  cursor: pointer;
 
   @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
   letter-spacing: 0.05em;
@@ -96,21 +105,15 @@
   }
 }
 
-.form__nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 14px 0 0 0;
-}
-
 .form__nav-privacy-label {
   width: 36%;
   padding: 10px 23px 0 34px;
 
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: $white;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .form__nav-privacy-description {
@@ -127,6 +130,7 @@
   width: 15px;
   height: 14px;
   margin-right: 17px;
+  cursor: pointer;
 
   border: solid 1px $white;
 }
@@ -140,6 +144,7 @@
   left: -29px;
   width: 10px;
   height: 6px;
+  cursor: pointer;
 
   background-image: url("../../img/checked.svg");
   background-repeat: no-repeat;
@@ -147,25 +152,10 @@
   background-position: center;
 }
 
-.form__block {
-  max-width: 574px;
-}
-
-.form__label:not(.form__label--textarea) {
-  margin-bottom: 40px;
-}
-
-.form__input {
-  padding: 13px 19px 14px 19px;
-}
-
-.form__label--textarea .form__input {
-  min-height: 153px;
-}
-
 @media (max-width: $tablet-width) {
   .form__text {
     padding-bottom: 14px;
+
     @include Roboto-style(32px, normal, 45px, $white, left, none);
   }
 
@@ -209,6 +199,7 @@
 @media (max-width: $mobile-width) {
   .form__text {
     padding-bottom: 14px;
+
     @include Roboto-style(28px, normal, 39px, $white, left, none);
   }
 

@@ -16,9 +16,7 @@
 <body>
 
 <!--svg-sprite-->
-<div class="visually-hidden">
-  <include src="build/img/sprite.svg"></include>
-</div>
+  <img class="visually-hidden" src="build/img/sprite.svg" alt="svg">
 <!--svg-sprite-->
 
 <section class="master-block">
@@ -28,13 +26,15 @@
       <div class="header__logo-wrapper">
         <a class="header__logo-link">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/brain.svg">
+            <source type="image/webp" srcset="img/logo-tablet.webp 1x, img/logo-tablet2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/sprite/brain.svg">
+            <!-- 1х: 202px; 2x: 404px -->
             <img class="header__logo-image"
-                 src="img/logo-tablet.png"
-                 srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x"
-                 alt="Логотип сайта 'Smart Device'"
-                 width="52"
-                 height="52">
+                   src="img/logo-tablet.png"
+                   srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x"
+                   alt="Логотип сайта 'Smart Device'"
+                   width="202"
+                   height="52">
           </picture>
         </a>
         <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
@@ -185,7 +185,7 @@
         <input class="modal-window__input form__input" type="text" placeholder="Телефон" name="user_phone" id="user_phone">
       </label>
       <label class="modal-window__label modal-window__label--textarea form__label form__label--textarea">
-        <textarea class="modal-window__input modal-window__input--textarea form__input form__input--textarea" type="text" placeholder="Ваш вопрос" name="user_text" id="user_text"></textarea>
+        <textarea class="modal-window__input modal-window__input--textarea form__input form__input--textarea" placeholder="Ваш вопрос" name="user_text" id="user_text"></textarea>
       </label>
     </div>
     <div class="modal-window__nav form__nav">
@@ -201,28 +201,28 @@
   <div class="footer__wrapper">
     <div class="footer__social-block social-block">
       <a class="social-block__logo-link">
-        <img class="social-block__logo-image" src="img/logo-footer.svg" width="216" height="52" alt="Логотип сайта 'Smart Device'">
+        <img class="social-block__logo-image" src="mg/sprite/sprite.svg#logo-footer" width="216" height="52" alt="Логотип сайта 'Smart Device'">
       </a>
       <span class="social-block__item">1999-2018 SD Service Devices</span>
       <ul class="social-block__social-list social-list">
         <li class="social-list__item social-list__item--fb">
           <a class="social-list__link" href="#" aria-label="Фейсбук">
             <svg class="social-list__image"  width="27" height="27">
-              <use xlink:href="img/sprite.svg#fb"></use>
+              <use xlink:href="img/sprite/sprite.svg#fb"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item social-list__item--ok">
           <a class="social-list__link" href="#" aria-label="Одноклассники">
             <svg class="social-list__image"  width="27" height="26">
-              <use xlink:href="img/sprite.svg#ok"></use>
+              <use xlink:href="img/sprite/sprite.svg#ok"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item social-list__item--vk">
           <a class="social-list__link" href="#" aria-label="Вконтакте">
             <svg class="social-list__image"  width="27" height="26">
-              <use xlink:href="img/sprite.svg#vk"></use>
+              <use xlink:href="img/sprite/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
@@ -278,23 +278,23 @@
       </div>
     </div>
   </div>
-    <div class="footer__copyright copyright">
-      <h3 class="copyright__headline visually-hidden">Информация об авторском праве</h3>
-      <ul class="copyright__list">
-        <li class="copyright__item">
-          <span>Все права защищены</span>
-          <span>1999-2018 SD Service Devices</span>
-        </li>
-        <li class="copyright__item">
-          <a class="copyright__link" href="#">Условия конфиденциальности</a>
-        </li>
-        <li class="copyright__item copyright__item--mod">
-          <a class="copyright__link" href="#">Developed by wow studio</a>
-        </li>
-      </ul>
-    </div>
+  <div class="footer__copyright copyright">
+    <h3 class="copyright__headline visually-hidden">Информация об авторском праве</h3>
+    <ul class="copyright__list">
+      <li class="copyright__item">
+        <span>Все права защищены</span>
+        <span>1999-2018 SD Service Devices</span>
+      </li>
+      <li class="copyright__item copyright__item--mod">
+        <a class="copyright__link" href="#">Условия конфиденциальности</a>
+      </li>
+      <li class="copyright__item copyright__item--mod">
+        <a class="copyright__link" href="#">Developed by wow studio</a>
+      </li>
+    </ul>
+  </div>
 </footer>
-<script src="js/imask.js"></script>
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

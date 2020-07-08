@@ -10,10 +10,12 @@
   position: relative;
   text-decoration: none;
   color: $white;
+  cursor: pointer;
 
-  &:before {
+  &::before {
     content: "";
     display: inline-block;
+    vertical-align: middle;
 
     @include backImage();
   }
@@ -22,7 +24,7 @@
     padding-right: 82px;
   }
 
-  &--mail:before {
+  &--mail::before {
     width: 14px;
     height: 10px;
     margin-right: 12px;
@@ -30,7 +32,7 @@
     background-image: url("../../img/mail.svg");
   }
 
-  &--tel:before {
+  &--tel::before {
     margin: 0 6px;
     box-sizing: border-box;
     width: 18px;
@@ -39,8 +41,15 @@
   }
 }
 
+.contacts-list__link:hover {
+  &::before {
+    filter: brightness(100);
+  }
+}
+
 .contacts-list__item-text {
   display: inline-block;
+  vertical-align: middle;
 }
 
 @media (max-width: 1500px) {
@@ -54,23 +63,23 @@
   }
 
   .contacts-list__link {
-    &--mail:before {
+    &--mail::before {
       width: 25px;
       height: 25px;
     }
 
-    &--tel:before {
+    &--tel::before {
       width: 25px;
       height: 25px;
     }
   }
 }
 
-
 @media (max-width: $tablet-width) {
   .contacts-list__link--mail {
     padding-right: 0;
   }
+
   .contacts-list {
     justify-content: space-between;
     width: 17%;

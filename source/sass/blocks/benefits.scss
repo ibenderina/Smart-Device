@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0 auto;
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     display: block;
@@ -15,12 +15,12 @@
     height: 649px;
     z-index: -1;
 
-    background-image: url(../../img/rect-benefits-bottom-desktop.svg);
+    background-image: url("../../img/rect-benefits-bottom-desktop.svg");
     background-position: right 47%;
     background-repeat: no-repeat;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     display: block;
@@ -29,7 +29,7 @@
     right: 2%;
     height: 516px;
 
-    background-image: url(../../img/rect-benefits-right-desktop.svg);
+    background-image: url("../../img/rect-benefits-right-desktop.svg");
     background-position: right 70%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,7 +50,7 @@
   position: relative;
   align-content: stretch;
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     display: block;
@@ -60,7 +60,7 @@
     left: -184px;
     z-index: -1;
 
-    background-image: url(../../img/rect-benefits-left-top-desktop.svg);
+    background-image: url("../../img/rect-benefits-left-top-desktop.svg");
     background-position: left 30%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -76,9 +76,9 @@
   margin-bottom: 31px;
 
   border-left: 3px solid $blue;
-  border-top: 1px solid #EBEBEB;
-  border-right: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
   background-color: $white;
 }
 
@@ -119,23 +119,23 @@
   .benefits {
     padding: 56px 70px 70px 70px;
 
-    &:before {
+    &::before {
       width: 973px;
       bottom: -35%;
       right: 0;
       height: 749px;
 
-      background-image: url(../../img/rect-benefits-bottom-tablet.svg);
+      background-image: url("../../img/rect-benefits-bottom-tablet.svg");
       background-position: right 47%;
     }
 
-    &:after {
+    &::after {
       display: none;
     }
   }
 
   .benefits__list {
-    &:before {
+    &::before {
       display: none;
     }
   }
@@ -143,37 +143,34 @@
 
 @media (max-width: $tablet-width) {
   .benefits {
-      padding: 56px 25px 20px 25px;
+    padding: 56px 25px 20px 25px;
+  }
 
-      &:before {
+  .benefits__list {
+    justify-content: flex-start;
+  }
 
-      }
+  .benefits__list-item {
+    width: 48%;
+    max-width: 570px;
+    min-height: auto;
+    padding: 25px 22px 22px;
+    margin-bottom: 31px;
+
+    &:nth-child(odd) {
+      margin-right: 28px;
     }
+  }
 
-    .benefits__list {
-      justify-content: flex-start;
-    }
+  .benefits__item-headline {
+    padding: 0;
 
-    .benefits__list-item {
-      width: 48%;
-      max-width: 570px;
-      min-height: auto;
-      padding: 25px 22px 22px;
-      margin-bottom: 31px;
+    @include Roboto-style(24px, normal, 38px, $blue, left, none);
+  }
 
-      &:nth-child(odd) {
-        margin-right: 28px;
-      }
-    }
-
-    .benefits__item-headline {
-      padding: 0;
-      @include Roboto-style(24px, normal, 38px, $blue, left, none);
-    }
-
-    .benefits__item-description {
-      padding-top: 8px;
-    }
+  .benefits__item-description {
+    padding-top: 8px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -192,6 +189,7 @@
 
   .benefits__item-headline {
     padding: 6px 0 10px 0;
+
     @include Roboto-style(20px, normal, 28px, $blue, left, none);
   }
 

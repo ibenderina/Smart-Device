@@ -33,6 +33,8 @@
 
 .modal-window__text {
   padding-bottom: 8px;
+
+  @include Roboto-style(28px, normal, 39px, $white, left, none);
 }
 
 .modal-window__description {
@@ -56,15 +58,13 @@
   width: 16px;
   height: 16px;
   display: inline-block;
+  vertical-align: middle;
 
   background-image: url("../../img/close.svg");
+
   @include backImage();
   border: none;
   background-color: transparent;
-}
-
-.modal-window__text {
-  @include Roboto-style(28px, normal, 39px, $white, left, none);
 }
 
 .modal-window__submit-button {

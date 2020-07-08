@@ -6,6 +6,7 @@
 
 .header__logo-link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header__logo-wrapper {
@@ -31,10 +32,12 @@
   border-bottom: 1px solid $white;
   border-left: none;
   border-right: none;
+  cursor: pointer;
 }
 
 .header__callback-button {
   display: inline-block;
+  vertical-align: middle;
   padding: 0 30px 0 30px;
   margin: 6px auto;
   box-sizing: border-box;
@@ -42,8 +45,20 @@
   border-radius: 5px;
   border: 1px solid $white;
   background-color: transparent;
+  cursor: pointer;
 
   @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
+
+  &:hover,
+  &:active {
+    background-color: $blue;
+    border-color: $blue;
+  }
+
+  &:active {
+    background-color: $active-blue;
+    border-color: $active-blue;
+  }
 }
 
 @media (max-width: $desktop-width) {
@@ -87,4 +102,3 @@
     padding: 0;
   }
 }
-

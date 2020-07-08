@@ -6,7 +6,7 @@
 }
 
 .master-block__wrapper {
-  background-image: url(../../img/rect-main-desktop.svg);
+  background-image: url("../../img/rect-main-desktop.svg");
   background-repeat: no-repeat;
   background-position: 64% 24%;
   background-size: 1900px 892px;
@@ -28,7 +28,7 @@
 
 @media (max-width: $tablet-width) {
   .master-block__wrapper {
-    background-image: url(../../img/rect-main-tablet.svg);
+    background-image: url("../../img/rect-main-tablet.svg");
     background-position: right 2%;
     background-size: 769px 563px;
   }
@@ -36,7 +36,7 @@
 
 @media (max-width: $mobile-width) {
   .master-block__wrapper {
-    background-image: url(../../img/rect-main-mobile.svg);
+    background-image: url("../../img/rect-main-mobile.svg");
     background-position: right -1%;
     background-size: 300px 530px;
   }

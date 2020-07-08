@@ -3,7 +3,7 @@ body {
 
   background-color: $white;
 
-  @include PTMono-style(16px, normal, 22px, $grey-brown, left, none)
+  @include PTMono-style(16px, normal, 22px, $grey-brown, left, none);
 }
 
 .visually-hidden:not(:focus):not(:active),

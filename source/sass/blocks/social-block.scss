@@ -12,6 +12,7 @@
 .social-block__logo-link {
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .social-block__logo-image {
@@ -19,7 +20,7 @@
 }
 
 .social-block__logo-text {
-  color: #203C42;
+  color: $green-grey;
 }
 
 .social-block__item {
@@ -40,6 +41,7 @@
 
   .social-block__item {
     display: inline-block;
+    vertical-align: middle;
     padding: 0;
     margin: 0;
     opacity: 0.5;

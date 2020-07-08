@@ -10,29 +10,30 @@
   background-size: 217px 320px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../../img/2005-2x.png");
-    }
+    background-image: url("../../img/2005-2x.png");
+  }
 
-    &:before {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 550px;
-      height: 897px;
-      top: -83%;
-      left: 0;
-      z-index: -1;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 550px;
+    height: 897px;
+    top: -83%;
+    left: 0;
+    z-index: -1;
 
-      background-image: url(../../img/rect-2005-left-desktop.svg);
-      background-position: left;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    background-image: url("../../img/rect-2005-left-desktop.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .about__headline {
   margin: 0;
   padding: 0 0 19px 0;
+
   @include Roboto-style(36px, normal, 57px, $grey-brown, left, none);
 }
 
@@ -50,6 +51,7 @@
 
   border-radius: 5px;
   border: solid 2px $blue;
+  cursor: pointer;
 
   @include Roboto-style(14px, bold, 18px, $blue, center, uppercase);
   letter-spacing: 0.05em;
@@ -70,6 +72,7 @@
 
 .about__description-more {
   display: inline-block;
+  vertical-align: middle;
 }
 
 @media (max-width: $desktop-width) {
@@ -79,7 +82,7 @@
 
     background-position: 8% 33%;
 
-    &:before {
+    &::before {
       top: -145%;
       left: -26%;
       z-index: -1;
@@ -94,7 +97,7 @@
 
     background-position: 8% 33%;
 
-    &:before {
+    &::before {
       display: none;
     }
   }
@@ -111,6 +114,7 @@
   .about__headline {
     margin: 0;
     padding: 0 0 25px 0;
+
     @include Roboto-style(32px, normal, 45px, $grey-brown, left, none);
   }
 
@@ -137,6 +141,7 @@
 
   .about__headline {
     padding: 0 0 21px;
+
     @include Roboto-style(28px, normal, 39px, $grey-brown, left, none);
   }
 
