@@ -9,6 +9,8 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const svgSprite = require('gulp-svg-sprite');
+const svgstore = require('gulp-svgstore');
 const del = require("del");
 
 gulp.task("css", function () {
@@ -92,12 +94,23 @@ gulp.task("js", function () {
   .pipe(gulp.dest("build/js"));
 });
 
+gulp.task("sprite", function () {
+  return gulp.src("source/img/*.svg")
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("build/img"));
+});
+
 gulp.task("build", gulp.series(
   "clean",
   "images",
   "webp",
+  "sprite",
   "css",
   "html",
   "copy",
-  "js"));
+  "js"
+));
 gulp.task("start", gulp.series("build", "server"));

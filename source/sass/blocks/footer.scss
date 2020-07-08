@@ -1,21 +1,28 @@
 .footer {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 48px 0 0 0;
+  width: 100%;
 }
 
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 39px 252px 0 252px;
+}
 
-@media (min-width: $tablet-width) {
-  .footer {
-    display: flex;
-    flex-wrap: wrap;
+@media (max-width: $tablet-width) {
+  .footer__wrapper {
+    display: block;
     padding: 0;
   }
 }
 
-
-@media (min-width: 1500px) {
-  .footer {
-    padding: 65px 0 0 0;
+@media (max-width: $mobile-width) {
+  .footer__wrapper {
+    padding: 27px 0 0;
   }
 }
+
+
+

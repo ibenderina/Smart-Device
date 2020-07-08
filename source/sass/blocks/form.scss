@@ -7,16 +7,21 @@
   border: none;
 }
 
-.form__text {
-  margin: 0;
-  padding-bottom: 13px;
+.form__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  @include Roboto-style(28px, normal, 140.62%, $white, left, none);
+.form__text {
+  padding-bottom: 5px;
+  margin: 0;
+  @include Roboto-style(36px, normal, 57px, $white, left, none);
 }
 
 .form__description {
   margin: 0;
-  padding-bottom: 24px;
+  padding-bottom: 52px;
 
   color: $white;
 }
@@ -25,6 +30,11 @@
   display: block;
   width: 100%;
   margin-bottom: 25px;
+}
+
+.form__label:not(.form__label--textarea) {
+  margin-bottom: 40px;
+  width: 47%;
 }
 
 .form__input {
@@ -56,11 +66,13 @@
   min-height: 108px;
 }
 
+.form__nav {
+  max-width: 572px;
+}
+
 .form__nav-submit-button {
-  margin: 0 auto;
   padding: 13px 0 13px 0;
-  width: 100%;
-  max-width: 400px;
+  width: 48%;
   display: block;
 
   background-color: transparent;
@@ -84,19 +96,25 @@
   }
 }
 
+.form__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 0 0;
+}
+
 .form__nav-privacy-label {
-  display: inline-block;
-  padding: 30px 61px 0 34px;
-  position: relative;
+  width: 36%;
+  padding: 10px 23px 0 34px;
 
   font-size: 14px;
   line-height: 16px;
-  color: $white;
+  color: #FFFFFF;
   opacity: 0.8;
 }
 
 .form__nav-privacy-description {
-  padding: 0;
+  position: relative;
 }
 
 .form__nav-privacy-checkbox + .form__nav-privacy-description::before {
@@ -104,8 +122,8 @@
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  top: 32px;
-  left: 0;
+  top: -2px;
+  left: -32px;
   width: 15px;
   height: 14px;
   margin-right: 17px;
@@ -118,8 +136,8 @@
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  top: 37px;
-  left: 3px;
+  top: 2px;
+  left: -29px;
   width: 10px;
   height: 6px;
 
@@ -129,20 +147,25 @@
   background-position: center;
 }
 
-@media (min-width: 500px) {
-  .form {
-    padding: 31px 40px 39px 40px;
-  }
+.form__block {
+  max-width: 574px;
 }
 
-@media (min-width:$tablet-width) {
-  .form__block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.form__label:not(.form__label--textarea) {
+  margin-bottom: 40px;
+}
 
+.form__input {
+  padding: 13px 19px 14px 19px;
+}
+
+.form__label--textarea .form__input {
+  min-height: 153px;
+}
+
+@media (max-width: $tablet-width) {
   .form__text {
+    padding-bottom: 14px;
     @include Roboto-style(32px, normal, 45px, $white, left, none);
   }
 
@@ -150,8 +173,12 @@
     padding-bottom: 53px;
   }
 
+  .form__block {
+    max-width: none;
+  }
+
   .form__label:not(.form__label--textarea) {
-    margin-bottom: 39px;
+    margin-bottom: 46px;
     width: 47%;
   }
 
@@ -160,55 +187,58 @@
   }
 
   .form__nav {
-    padding: 14px 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .form__nav-submit-button {
-    width: 47%;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 590px;
   }
 
   .form__nav-privacy-label {
-    width: 36%;
-    padding: 10px 23px 0 34px;
+    padding: 10px 14px 0 0;
+    width: 38%;
   }
 
   .form__nav-privacy-checkbox + .form__nav-privacy-description::before {
-    top: 10px;
+    top: 0;
   }
 
   .form__nav-privacy-checkbox:checked + .form__nav-privacy-description::after {
-    top: 14px;
-    left: 3px;
+    top: 4px;
+    left: -29px;
   }
 }
 
-@media (min-width: $mega-desktop-width) {
+@media (max-width: $mobile-width) {
   .form__text {
-    padding-bottom: 5px;
-    @include Roboto-style(36px, normal, 57px, $white, left, none);
+    padding-bottom: 14px;
+    @include Roboto-style(28px, normal, 39px, $white, left, none);
   }
 
-  .form__block {
-    max-width: 574px;
+  .form__description {
+    padding-bottom: 25px;
   }
 
   .form__label:not(.form__label--textarea) {
-    margin-bottom: 40px;
-  }
-
-  .form__input {
-    padding: 13px 19px 14px 19px;
+    width: 100%;
+    margin-bottom: 34px;
   }
 
   .form__label--textarea .form__input {
-    min-height: 153px;
+    min-height: 103px;
   }
 
   .form__nav {
-    max-width: 572px;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .form__nav-submit-button {
+    display: block;
+    width: 100%;
+  }
+
+  .form__nav-privacy-label {
+    padding: 30px 32px 0 32px;
+    width: 100%;
+    display: block;
   }
 }

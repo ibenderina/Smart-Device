@@ -11,31 +11,50 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-window--active {
+.modal-window--active .modal-window {
   display: block;
+}
+
+.modal-window--active {
+  overflow: hidden;
 }
 
 .modal-window__form {
   position: absolute;
-  top: 172px;
+  top: 136px;
   left: 0;
   right: 0;
   margin: auto;
-  width: 490px;
-  height: 500px;
-  padding: 33px 40px 36px 40px;
+  width: 412px;
+  padding: 33px 39px 38px 39px;
 
   background-color: $blue;
+}
+
+.modal-window__text {
+  padding-bottom: 8px;
+}
+
+.modal-window__description {
+  padding-bottom: 33px;
+  padding-right: 17px;
+}
+
+.modal-window__input--textarea {
+  min-height: 102px;
+}
+
+.modal-window__label--textarea {
+  margin-bottom: 15px;
 }
 
 .modal-window__close-button {
   position: absolute;
   content: "";
-  top: 30px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
-  font-size: 30px;
+  top: 19px;
+  right: 19px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
 
   background-image: url("../../img/close.svg");
@@ -44,16 +63,48 @@
   background-color: transparent;
 }
 
-.modal-window__form .form__text {
+.modal-window__text {
   @include Roboto-style(28px, normal, 39px, $white, left, none);
 }
 
-.modal-window .form__nav-submit-button {
+.modal-window__submit-button {
   display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.modal-window__privacy-label {
+  display: block;
+  width: 100%;
+  padding: 34px 23px 0 49px;
+}
+
+.modal-window .form__label:not(.form__label--textarea) {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.modal-window__input {
   width: 100%;
 }
 
-.modal-window .form__nav-privacy-label {
-  display: block;
+.modal-window .modal-window__input--textarea {
+  min-height: 99px;
+  padding: 4px 19px 14px 23px;
+}
+
+.modal-window__input::placeholder {
   width: 100%;
+  line-height: 36px;
+}
+
+.modal-window__privacy-checkbox + .modal-window__privacy-description::before {
+  top: 0;
+  left: -49px;
+}
+
+.modal-window__privacy-checkbox:checked + .modal-window__privacy-description::after {
+  top: 5px;
+  left: -46px;
 }

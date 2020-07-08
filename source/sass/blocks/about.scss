@@ -1,32 +1,53 @@
 .about {
-  padding: 18px 17px 76px 15px;
+  position: relative;
+  padding: 31px 386px 111px 553px;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1500px;
+
+  background-image: url("../../img/2005.png");
+  background-repeat: no-repeat;
+  background-position: 20% 29%;
+  background-size: 217px 320px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/2005-2x.png");
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 550px;
+      height: 897px;
+      top: -83%;
+      left: 0;
+      z-index: -1;
+
+      background-image: url(../../img/rect-2005-left-desktop.svg);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 }
 
 .about__headline {
   margin: 0;
-
-  @include Roboto-style(28px, normal, 140.62%, $grey-brown, left, none);
+  padding: 0 0 19px 0;
+  @include Roboto-style(36px, normal, 57px, $grey-brown, left, none);
 }
 
 .about__description {
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 21px;
-
-  &:last-of-type {
-    padding-bottom: 39px;
-  }
-}
-
-.about__description-more {
-  display: none;
+  padding: 0 0 19px 0;
 }
 
 .about__more-link {
   padding: 11px 49px 10px 49px;
   box-sizing: border-box;
+  margin-top: 20px;
+  display: block;
+  max-width: 183px;
+
   border-radius: 5px;
   border: solid 2px $blue;
 
@@ -47,83 +68,87 @@
   }
 }
 
-@media (min-width: 500px) {
-  .about {
-    padding: 18px 40px 68px 40px;
-  }
+.about__description-more {
+  display: inline-block;
 }
 
-@media (min-width: $tablet-width) {
+@media (max-width: $desktop-width) {
   .about {
-    position: relative;
-    padding: 36px 35px 95px 212px;
-
-    background-image: url("../../img/2005.png");
-    background-position: -2% 33%;
-    background-size: 261px 351px;
-    background-repeat: no-repeat;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../../img/2005-2x.png");
-    }
-  }
-
-  .about__headline {
-    @include Roboto-style(32px, normal, 140.62%, $grey-brown, left, none);
-  }
-
-  .about__description {
-    padding-top: 23px;
-    padding-bottom: 0;
-
-    &:last-of-type {
-      padding-bottom: 52px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .about {
+    max-width: 1024px;
     padding: 36px 70px 103px 312px;
 
     background-position: 8% 33%;
+
+    &:before {
+      top: -145%;
+      left: -26%;
+      z-index: -1;
+    }
   }
 }
 
-@media (min-width: $mega-desktop-width) {
+@media (max-width: 1500px) {
   .about {
-    position: relative;
-    padding: 31px 70px 121px 286px;
+    max-width: 1024px;
+    padding: 36px 70px 103px 312px;
 
-    background-position: 7% 29%;
-    background-size: 217px 320px;
+    background-position: 8% 33%;
 
     &:before {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 550px;
-      height: 897px;
-      top: -83%;
-      left: -20%;
-
-      background-image: url(../../img/rect-2005-left-desktop.svg);
-      background-position: left;
-      background-repeat: no-repeat;
-      background-size: cover;
+      display: none;
     }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about {
+    padding: 9px 37px 85px 212px;
+
+    background-position: -2% 13%;
+    background-size: 261px 351px;
   }
 
   .about__headline {
-    @include Roboto-style(36px, normal, 57px, $grey-brown, left, none);
+    margin: 0;
+    padding: 0 0 25px 0;
+    @include Roboto-style(32px, normal, 45px, $grey-brown, left, none);
   }
 
   .about__description {
-    padding-top: 18px;
-    padding-right: 54px;
+    margin: 0;
+    padding: 0 0 24px 0;
   }
 
   .about__description-more {
-    display: inline-block;
+    display: none;
+  }
+
+  .about__more-link {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about {
+    padding: 15px 13px 65px 13px;
+
+    background: none;
+  }
+
+  .about__headline {
+    padding: 0 0 21px;
+    @include Roboto-style(28px, normal, 39px, $grey-brown, left, none);
+  }
+
+  .about__description {
+    padding-bottom: 40px;
+
+    &:last-of-type {
+      padding-bottom: 29px;
+    }
+  }
+
+  .about__more-link {
+    margin-top: 0;
   }
 }

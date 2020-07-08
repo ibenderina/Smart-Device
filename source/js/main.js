@@ -7,20 +7,24 @@ const ClassName = {
   CALLBACK_WINDOW: `.modal-window`,
   ACTIVE_CALLBACK_WINDOW: `modal-window--active`,
   CLOSE_BUTTON: `.modal-window__close-button`,
-
+  MODAL_FORM: `.modal-window__form`,
+  SCROLL_LINKS: `.main-screen__scroll, .main-screen__link`,
+  INPUT_NAME: `#username`,
 };
 
 const DEVICE_SIZE = 768;
 
 const ESC = `Escape`;
 
+const PHONE_INPUTS = [`phone`, `user_phone`];
+
 (function () {
-  const hideElement = (element) => {
-    element.classList.add(ClassName.COLLAPSED_BLOCK);
+  const classListAdd = function (element, className) {
+    element.classList.add(className);
   };
 
-  const showElement = (element) => {
-    element.classList.remove(ClassName.COLLAPSED_BLOCK);
+  const classListRemove = function (element, className) {
+    element.classList.remove(className);
   };
 
   const toggleInfoBlock = function (selectorHeadline) {
@@ -30,18 +34,18 @@ const ESC = `Escape`;
     }
     window.addEventListener(`resize`, function (evt) {
       if (innerWidth < DEVICE_SIZE) {
-        hideElement(element);
+        classListAdd(element, ClassName.COLLAPSED_BLOCK);
       } else {
-        showElement(element);
+        classListRemove(element, ClassName.COLLAPSED_BLOCK);
       }
     });
 
     selectorHeadline.addEventListener(`click`, function () {
       if (innerWidth < DEVICE_SIZE) {
         if (element.classList.contains(ClassName.COLLAPSED_BLOCK)) {
-          showElement(element);
+          classListRemove(element, ClassName.COLLAPSED_BLOCK);
         } else {
-          hideElement(element);
+          classListAdd(element, ClassName.COLLAPSED_BLOCK);
         }
       }
     });
@@ -54,17 +58,18 @@ const ESC = `Escape`;
     if (callbackButton) {
       callbackButton.addEventListener(`click`, function () {
         if (callbackWindow) {
-          callbackWindow.classList.add(ClassName.ACTIVE_CALLBACK_WINDOW)
+          classListAdd(document.body, ClassName.ACTIVE_CALLBACK_WINDOW);
+          const username = document.querySelector(ClassName.INPUT_NAME);
+          username.focus();
         }
       });
     }
 
     window.addEventListener(`keydown`, function (evt) {
       if (evt.key === ESC) {
-        const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
-        callbackWindow.classList.remove(ClassName.ACTIVE_CALLBACK_WINDOW)
+        classListRemove(document.body, ClassName.ACTIVE_CALLBACK_WINDOW);
       }
-    })
+    });
   };
 
   const closeModalWindow = function () {
@@ -72,25 +77,46 @@ const ESC = `Escape`;
     const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
     if (closeButton) {
       closeButton.addEventListener(`click`, function () {
-        callbackWindow.classList.remove(ClassName.ACTIVE_CALLBACK_WINDOW)
+        classListRemove(document.body, ClassName.ACTIVE_CALLBACK_WINDOW);
       });
     }
 
     if (callbackWindow) {
       callbackWindow.addEventListener(`click`, function (evt) {
-        console.log(evt.target);
-        if (evt.target.closest(`.modal-window__form`) === null) {
-          callbackWindow.classList.remove(ClassName.ACTIVE_CALLBACK_WINDOW);
+        if (evt.target.closest(ClassName.MODAL_FORM) === null) {
+          classListRemove(document.body, ClassName.ACTIVE_CALLBACK_WINDOW);
         }
       });
     }
-
   };
+
+  const setScrollLinkSmooth = function (evt) {
+    evt.preventDefault();
+    const anchor = evt.target.closest(`[href]`).href.split(`#`);
+    document.querySelector(`#` + anchor[1]).scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
+  const smoothScroll = function (linkSelector) {
+    const scrollLinks = Array.from(document.querySelectorAll(linkSelector));
+    scrollLinks.forEach(function (element) {
+      element.addEventListener(`click`, setScrollLinkSmooth);
+    });
+  };
+
+  PHONE_INPUTS.forEach(function (input) {
+    IMask(document.getElementById(input), {
+        mask: `+{7}(000)000-00-00`
+      });
+  });
 
   openModalWindow();
   closeModalWindow();
+  smoothScroll(ClassName.SCROLL_LINKS);
 
-  Array.from(document.querySelectorAll(ClassName.INFO_MENU_HEADLINE)).forEach(function(selectorHeadline) {
+  Array.from(document.querySelectorAll(ClassName.INFO_MENU_HEADLINE))
+  .forEach(function(selectorHeadline) {
     toggleInfoBlock(selectorHeadline);
   });
 })();
