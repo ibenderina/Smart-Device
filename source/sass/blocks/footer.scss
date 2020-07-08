@@ -8,10 +8,18 @@
   justify-content: space-between;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 39px 252px 0 252px;
+  padding: 64px 122px 57px 252px;
 }
 
-@media (max-width: $tablet-width) {
+
+@media (max-width: $desktop-width) {
+  .footer__wrapper {
+    display: flex;
+    padding: 64px 101px 57px;
+  }
+}
+
+@media (max-width: 1500px) {
   .footer__wrapper {
     display: block;
     padding: 0;

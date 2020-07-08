@@ -25,17 +25,20 @@
   <h1 class="master-block__headline visually-hidden">Интернет-магазин печатных плат</h1>
   <div class="master-block__wrapper wrapper">
     <header class="master-block__header header">
-      <a class="header__logo-link">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x">
-          <img class="header__logo-image"
-               src="img/brain.svg"
-               alt="Логотип сайта 'Smart Device'"
-               width="52"
-               height="52">
-        </picture>
-      </a>
-      <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
+      <div class="header__logo-wrapper">
+        <a class="header__logo-link">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/brain.svg">
+            <img class="header__logo-image"
+                 src="img/logo-tablet.png"
+                 srcset="img/logo-tablet.png 1x, img/logo-tablet2x.png 2x"
+                 alt="Логотип сайта 'Smart Device'"
+                 width="52"
+                 height="52">
+          </picture>
+        </a>
+        <button class="header__nav-toggle" type="button" aria-label="Развернуть меню"></button>
+      </div>
       <div class="header__contacts-list contacts-list">
         <a class="contacts-list__link contacts-list__link--mail" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
           <span class="contacts-list__item-text">info@sd.ru</span>
@@ -226,35 +229,37 @@
       </ul>
     </div>
     <div class="footer__info-menu info-menu">
-      <div class="info-menu__wrapper">
+      <div class="info-menu__wrapper info-menu__sitemap">
         <h3 class="info-menu__headline">Разделы сайта</h3>
-        <ul class="info-menu__list">
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">О компании</a>
-          </li>
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Продукты</a>
-          </li>
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Производство печатных плат</a>
-          </li>
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Монтаж печатных плат</a>
-          </li>
-        </ul>
-        <ul class="info-menu__list">
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Комплектующие</a>
-          </li>
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Доставка</a>
-          </li>
-          <li class="info-menu__item">
-            <a class="info-menu__link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="info-menu__list-wrapper">
+          <ul class="info-menu__list">
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">О компании</a>
+            </li>
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Продукты</a>
+            </li>
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Производство печатных плат</a>
+            </li>
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Монтаж печатных плат</a>
+            </li>
+          </ul>
+          <ul class="info-menu__list">
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Комплектующие</a>
+            </li>
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Доставка</a>
+            </li>
+            <li class="info-menu__item">
+              <a class="info-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="info-menu__wrapper">
+      <div class="info-menu__wrapper info-menu__contacts">
         <h3 class="info-menu__headline">Наш офис</h3>
         <ul class="info-menu__list">
           <li class="info-menu__item">
@@ -276,12 +281,14 @@
     <div class="footer__copyright copyright">
       <h3 class="copyright__headline visually-hidden">Информация об авторском праве</h3>
       <ul class="copyright__list">
-        <li class="copyright__item copyright__item--mod">Все права защищены</li>
-        <li class="copyright__item copyright__item--mod">1999-2018 SD Service Devices</li>
+        <li class="copyright__item">
+          <span>Все права защищены</span>
+          <span>1999-2018 SD Service Devices</span>
+        </li>
         <li class="copyright__item">
           <a class="copyright__link" href="#">Условия конфиденциальности</a>
         </li>
-        <li class="copyright__item">
+        <li class="copyright__item copyright__item--mod">
           <a class="copyright__link" href="#">Developed by wow studio</a>
         </li>
       </ul>
