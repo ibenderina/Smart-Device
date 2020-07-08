@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.social-list__image {
+.social-list__item svg {
   &:hover,
   &:focus {
     filter: brightness(0);
@@ -50,7 +50,7 @@
     width: 30%;
   }
 
-  .social-list__image {
+  .social-list__item svg {
     &:hover,
     &:focus {
       filter: brightness(0);

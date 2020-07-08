@@ -17,7 +17,7 @@
   padding: 0;
 }
 
-.main-screen__headline {
+.main-screen h2 {
   position: relative;
   margin-bottom: 0;
 
@@ -26,7 +26,7 @@
   z-index: 10;
 }
 
-.main-screen__description {
+.main-screen p {
   position: relative;
   margin-bottom: 0;
   margin-top: 0;
@@ -163,14 +163,14 @@
     margin: 0;
   }
 
-  .main-screen__link {
+  .main-screen a {
     width: 126%;
     max-width: 317px;
     margin-left: 52px;
     padding: 16px 31px 18px 30px;
   }
 
-  .main-screen__headline {
+  .main-screen h2 {
     margin: 0;
     padding: 0;
 
@@ -178,7 +178,7 @@
     letter-spacing: 0.07em;
   }
 
-  .main-screen__description {
+  .main-screen p {
     margin-bottom: 11px;
     padding: 28px 0 44px 51px;
 
@@ -227,7 +227,7 @@
     max-width: none;
   }
 
-  .main-screen__link {
+  .main-screen a {
     margin: 0 auto;
     width: auto;
   }
@@ -242,13 +242,13 @@
     }
   }
 
-  .main-screen__description {
+  .main-screen p {
     padding-bottom: 24px;
     font-size: 16px;
     line-height: 25px;
   }
 
-  .main-screen__headline {
+  .main-screen h2 {
     @include Roboto-style(40px, bold, 48px, $white, left, uppercase);
     margin: 0;
   }

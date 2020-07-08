@@ -3,14 +3,14 @@
   padding: 86px 30px 96px;
 }
 
-.services__description {
+.services p {
   margin: 0;
   padding: 0 0 48px 0;
 
   @include Roboto-style(36px, normal, 57px, $white, left, none);
 }
 
-.services__item-link {
+.services__item a {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -136,7 +136,7 @@
     padding: 51px 26px 32px;
   }
 
-  .services__description {
+  .services p {
     padding: 0 89px 48px 0;
 
     @include Roboto-style(32px, normal, 45px, $white, left, none);
@@ -189,7 +189,7 @@
     padding: 51px 15px 32px;
   }
 
-  .services__description {
+  .services p {
     padding: 0 0 41px 10px;
 
     @include Roboto-style(28px, normal, 39px, $white, left, none);

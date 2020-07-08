@@ -82,19 +82,19 @@
   background-color: $white;
 }
 
-.benefits__item-headline {
+.benefits h3 {
   padding: 15px 0 0 0;
   margin: 0;
 
   @include Roboto-style(24px, normal, 38px, $blue, left, none);
 }
 
-.benefits__item-description {
+.benefits p {
   margin: 0;
   padding-top: 15px;
 }
 
-.benefits__list-image {
+.benefits svg {
   fill: $blue;
 }
 
@@ -102,15 +102,12 @@
 .benefits__list-item:focus {
   background-color: $blue;
 
-  .benefits__item-headline {
+  h3,
+  p {
     color: $white;
   }
 
-  .benefits__item-description {
-    color: $white;
-  }
-
-  .benefits__list-image {
+  svg {
     fill: $white;
   }
 }
@@ -162,13 +159,13 @@
     }
   }
 
-  .benefits__item-headline {
+  .benefits h3 {
     padding: 0;
 
     @include Roboto-style(24px, normal, 38px, $blue, left, none);
   }
 
-  .benefits__item-description {
+  .benefits p {
     padding-top: 8px;
   }
 }
@@ -187,13 +184,13 @@
     margin-right: auto;
   }
 
-  .benefits__item-headline {
+  .benefits h3 {
     padding: 6px 0 10px 0;
 
     @include Roboto-style(20px, normal, 28px, $blue, left, none);
   }
 
-  .benefits__item-description {
+  .benefits p {
     padding-top: 0;
   }
 }

@@ -18,7 +18,7 @@
   padding-left: 81px;
 }
 
-.info-menu__headline {
+.info-menu h3 {
   margin: 0;
   padding: 0;
   margin-bottom: 28px;
@@ -57,7 +57,7 @@
   }
 }
 
-.info-menu__link {
+.info-menu__item a {
   text-decoration: none;
   color: $dark-background;
   cursor: pointer;
@@ -87,7 +87,7 @@
     border: none;
   }
 
-  .info-menu__headline {
+  .info-menu h3 {
     padding: 0;
 
     &::after {
@@ -141,7 +141,7 @@
   }
 
   .info-menu--collapsed {
-    .info-menu__headline::after {
+    .info-menu h3::after {
       background-image: url("../../img/plus.svg");
     }
 
@@ -150,7 +150,7 @@
     }
   }
 
-  .info-menu__headline {
+  .info-menu h3 {
     position: relative;
     margin: 0;
     padding: 28px 15px;
