@@ -142,7 +142,7 @@
 
   .info-menu--collapsed {
     .info-menu h3::after {
-      background-image: url("../../img/plus.svg");
+      background-image: url("../img/plus.svg");
     }
 
     .info-menu__list {
@@ -165,7 +165,7 @@
       height: 17px;
       top: 29px;
       right: 17px;
-      background-image: url("../../img/minus.svg");
+      background-image: url("../img/minus.svg");
 
       @include backImage();
     }

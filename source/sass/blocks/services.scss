@@ -59,29 +59,29 @@
   }
 
   &--production {
-    background-image: url("../../img/service1-desktop.png");
+    background-image: url("../img/service1-desktop.png");
   }
 
   &--mounting {
-    background-image: url("../../img/service2-desktop.png");
+    background-image: url("../img/service2-desktop.png");
   }
 
   &--kits {
-    background-image: url("../../img/service3-desktop.png");
+    background-image: url("../img/service3-desktop.png");
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .services__item {
       &--production {
-        background-image: url("../../img/service12x-desktop.png");
+        background-image: url("../img/service12x-desktop.png");
       }
 
       &--mounting {
-        background-image: url("../../img/service22x-desktop.png");
+        background-image: url("../img/service22x-desktop.png");
       }
 
       &--kits {
-        background-image: url("../../img/service32x-desktop.png");
+        background-image: url("../img/service32x-desktop.png");
       }
     }
   }
@@ -106,7 +106,7 @@
     right: 28px;
     z-index: 1;
 
-    background-image: url("../../img/service-link.svg");
+    background-image: url("../img/service-link.svg");
   }
 
   &:hover,
@@ -150,29 +150,29 @@
     margin-right: 0;
 
     &--production {
-      background-image: url("../../img/service1-tablet.png");
+      background-image: url("../img/service1-tablet.png");
     }
 
     &--mounting {
-      background-image: url("../../img/service2-tablet.png");
+      background-image: url("../img/service2-tablet.png");
     }
 
     &--kits {
-      background-image: url("../../img/service3-tablet.png");
+      background-image: url("../img/service3-tablet.png");
     }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .services__item {
         &--production {
-          background-image: url("../../img/service12x-tablet.png");
+          background-image: url("../img/service12x-tablet.png");
         }
 
         &--mounting {
-          background-image: url("../../img/service22x-tablet.png");
+          background-image: url("../img/service22x-tablet.png");
         }
 
         &--kits {
-          background-image: url("../../img/service32x-tablet.png");
+          background-image: url("../img/service32x-tablet.png");
         }
       }
     }

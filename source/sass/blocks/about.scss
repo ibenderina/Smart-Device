@@ -4,13 +4,13 @@
   margin: 0 auto;
   max-width: 1500px;
 
-  background-image: url("../../img/2005.png");
+  background-image: url("../img/2005.png");
   background-repeat: no-repeat;
   background-position: 20% 29%;
   background-size: 217px 320px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../../img/2005-2x.png");
+    background-image: url("../img/2005-2x.png");
   }
 
   &::before {
@@ -23,7 +23,7 @@
     left: 0;
     z-index: -1;
 
-    background-image: url("../../img/rect-2005-left-desktop.svg");
+    background-image: url("../img/rect-2005-left-desktop.svg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;

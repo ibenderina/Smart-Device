@@ -10,7 +10,7 @@
     @include pseudoClass();
     @include backImage();
 
-    background-image: url("../../img/plane.png");
+    background-image: url("../img/plane.png");
     width: 511px;
     height: 288px;
     top: 162px;
@@ -26,7 +26,7 @@
     width: 1672px;
     height: 884px;
 
-    background-image: url("../../img/rect-main-desktop.svg");
+    background-image: url("../img/rect-main-desktop.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: auto;

@@ -29,7 +29,7 @@
     height: 10px;
     margin-right: 12px;
 
-    background-image: url("../../img/mail.svg");
+    background-image: url("../img/mail.svg");
   }
 
   &--tel::before {
@@ -37,7 +37,7 @@
     box-sizing: border-box;
     width: 18px;
     height: 18px;
-    background-image: url("../../img/phone-call.svg");
+    background-image: url("../img/phone-call.svg");
   }
 }
 

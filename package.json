@@ -37,6 +37,8 @@
     "start": "gulp start"
   },
   "dependencies": {
-    "imask": "^6.0.5"
+    "axios": "0.19.2",
+    "imask": "^6.0.5",
+    "redux-thunk": "2.3.0"
   }
 }
