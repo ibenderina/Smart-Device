@@ -54,7 +54,7 @@
   margin-bottom: 31px;
   margin-right: 30px;
 
-  &:last-of-type {
+  &:nth-child(3n) {
     margin-right: 0;
   }
 

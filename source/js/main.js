@@ -1,24 +1,24 @@
-const ClassName = {
-  INFO_MENU: `.info-menu__wrapper`,
-  INFO_MENU_HEADLINE: `.info-menu__headline`,
-  INFO_MENU_LIST: `.info-menu__list`,
-  COLLAPSED_BLOCK: `info-menu--collapsed`,
-  CALLBACK_BUTTON: `.header__callback-button`,
-  CALLBACK_WINDOW: `.modal-window`,
-  ACTIVE_CALLBACK_WINDOW: `modal-window--active`,
-  CLOSE_BUTTON: `.modal-window__close-button`,
-  MODAL_FORM: `.modal-window__form`,
-  SCROLL_LINKS: `.main-screen__scroll, .main-screen__link`,
-  INPUT_NAME: `#username`,
-};
-
-const DEVICE_SIZE = 768;
-
-const ESC = `Escape`;
-
-const PHONE_INPUTS = [`phone`, `user_phone`];
-
 (function () {
+  const ClassName = {
+    INFO_MENU: `.info-menu__wrapper`,
+    INFO_MENU_HEADLINE: `.info-menu__headline`,
+    INFO_MENU_LIST: `.info-menu__list`,
+    COLLAPSED_BLOCK: `info-menu--collapsed`,
+    CALLBACK_BUTTON: `.header__callback-button`,
+    CALLBACK_WINDOW: `.modal-window`,
+    ACTIVE_CALLBACK_WINDOW: `modal-window--active`,
+    CLOSE_BUTTON: `.modal-window__close-button`,
+    MODAL_FORM: `.modal-window__form`,
+    SCROLL_LINKS: `.main-screen__scroll, .main-screen__link`,
+    INPUT_NAME: `#username`,
+  };
+
+  const DEVICE_SIZE = 768;
+
+  const ESC = `Escape`;
+
+  const PHONE_INPUTS = [`phone`, `user_phone`];
+
   const classListAdd = function (element, className) {
     element.classList.add(className);
   };

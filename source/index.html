@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
-  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font">
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font">
-  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff" as="font">
+  <link rel="preload" href="fonts/pt-mono-woff2" as="font">
+  <link rel="preload" href="fonts/pt-mono-regular.woff" as="font">
   <link href="css/style.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +27,7 @@
         <a class="header__logo-link">
           <picture>
             <source type="image/webp" srcset="img/logo-tablet.webp 1x, img/logo-tablet2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/sprite/brain.svg">
+            <source media="(min-width: 300px) and (max-width: 767px)" srcset="img/sprite/brain.svg">
             <!-- 1х: 202px; 2x: 404px -->
             <img class="header__logo-image"
                    src="img/logo-tablet.png"
