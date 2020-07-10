@@ -36,6 +36,10 @@
   list-style-type: none;
 }
 
+.info-menu__contacts {
+  padding: 0 20px 0 161px;
+}
+
 .info-menu__list-wrapper {
   display: flex;
 }
@@ -66,6 +70,10 @@
 @media (max-width: $desktop-width) {
   .info-menu__sitemap {
     padding-left: 0;
+  }
+
+  .info-menu__contacts {
+    padding: 0;
   }
 }
 

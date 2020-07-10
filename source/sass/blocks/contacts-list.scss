@@ -3,7 +3,7 @@
   justify-content: flex-end;
   box-sizing: border-box;
   flex-grow: 1;
-  padding: 16px 53px;
+  padding: 16px 59px;
 }
 
 .contacts-list__link {
@@ -25,9 +25,9 @@
   }
 
   &--mail::before {
-    width: 14px;
-    height: 10px;
-    margin-right: 12px;
+    width: 30px;
+    height: 15px;
+    margin-right: 8px;
 
     background-image: url("../img/mail.svg");
   }

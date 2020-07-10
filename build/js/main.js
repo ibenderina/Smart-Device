@@ -4,7 +4,7 @@
     INFO_MENU_HEADLINE: `.info-menu__headline`,
     INFO_MENU_LIST: `.info-menu__list`,
     COLLAPSED_BLOCK: `info-menu--collapsed`,
-    CALLBACK_BUTTON: `.header__callback-button`,
+    CALLBACK_BUTTON: `.header__callback-link`,
     CALLBACK_WINDOW: `.modal-window`,
     ACTIVE_CALLBACK_WINDOW: `modal-window--active`,
     CLOSE_BUTTON: `.modal-window__close-button`,

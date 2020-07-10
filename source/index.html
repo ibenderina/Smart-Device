@@ -26,8 +26,8 @@
       <div class="header__logo-wrapper">
         <a class="header__logo-link">
           <picture>
-            <source type="image/webp" srcset="img/logo-tablet.webp 1x, img/logo-tablet2x.webp 2x">
-            <source media="(min-width: 300px) and (max-width: 767px)" srcset="img/sprite/brain.svg">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet.webp 1x, img/logo-tablet2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/brain.svg">
             <!-- 1х: 202px; 2x: 404px -->
             <img class="header__logo-image"
                    src="img/logo-tablet.png"
@@ -47,7 +47,7 @@
           <span class="contacts-list__item-text">+7 (495) 000 52 52</span>
         </a>
       </div>
-      <button class="header__callback-button" type="button">Заказать звонок</button>
+      <a class="header__callback-link" href="#">Заказать звонок</a>
     </header>
     <section class="master-block__main-screen main-screen">
       <div class="main-screen__text-wrapper">
@@ -207,22 +207,22 @@
       <ul class="social-block__social-list social-list">
         <li class="social-list__item social-list__item--fb">
           <a class="social-list__link" href="#" aria-label="Фейсбук">
-            <svg class="social-list__image"  width="27" height="27">
-              <use xlink:href="img/sprite/sprite.svg#fb"></use>
+            <svg class="social-list__image" width="27" height="27">
+              <use xlink:href="img/sprite.svg#fb"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item social-list__item--ok">
           <a class="social-list__link" href="#" aria-label="Одноклассники">
-            <svg class="social-list__image"  width="27" height="26">
-              <use xlink:href="img/sprite/sprite.svg#ok"></use>
+            <svg class="social-list__image" width="27" height="26">
+              <use xlink:href="img/sprite.svg#ok"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item social-list__item--vk">
           <a class="social-list__link" href="#" aria-label="Вконтакте">
-            <svg class="social-list__image"  width="27" height="26">
-              <use xlink:href="img/sprite/sprite.svg#vk"></use>
+            <svg class="social-list__image" width="27" height="26">
+              <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
