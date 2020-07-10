@@ -64,6 +64,10 @@
   &:focus {
     background-color: rgba(229, 242, 255, 0.3);
   }
+
+  &:active {
+    outline: 1px solid $white;
+  }
 }
 
 .form__label--textarea .form__input {
@@ -114,6 +118,15 @@
   color: $white;
   opacity: 0.8;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  };
 }
 
 .form__nav-privacy-description {

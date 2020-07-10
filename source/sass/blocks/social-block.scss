@@ -17,6 +17,15 @@
 
 .social-block img {
   padding: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .social-block__item {

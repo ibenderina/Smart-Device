@@ -65,6 +65,16 @@
   @include backImage();
   border: none;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    width: 17px;
+    height: 17px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .modal-window__submit-button {

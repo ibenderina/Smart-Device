@@ -56,7 +56,8 @@
     const callbackWindow = document.querySelector(ClassName.CALLBACK_WINDOW);
 
     if (callbackButton) {
-      callbackButton.addEventListener(`click`, function () {
+      callbackButton.addEventListener(`click`, function (evt) {
+        evt.preventDefault();
         if (callbackWindow) {
           classListAdd(document.body, ClassName.ACTIVE_CALLBACK_WINDOW);
           const username = document.querySelector(ClassName.INPUT_NAME);

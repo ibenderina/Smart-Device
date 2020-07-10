@@ -7,6 +7,15 @@
 .header__logo-link {
   text-decoration: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    filter: brightness(100);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__logo-wrapper {
@@ -33,6 +42,15 @@
   border-left: none;
   border-right: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: $blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__callback-link {

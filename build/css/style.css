@@ -59,6 +59,11 @@ input[type="checkbox"].visually-hidden {
 .header__logo-link {
   text-decoration: none;
   cursor: pointer; }
+  .header__logo-link:hover, .header__logo-link:focus {
+    -webkit-filter: brightness(100);
+            filter: brightness(100); }
+  .header__logo-link:active {
+    opacity: 0.5; }
 
 .header__logo-wrapper {
   display: flex;
@@ -81,6 +86,10 @@ input[type="checkbox"].visually-hidden {
   border-left: none;
   border-right: none;
   cursor: pointer; }
+  .header__nav-toggle:hover, .header__nav-toggle:focus {
+    border-color: #00b2ff; }
+  .header__nav-toggle:active {
+    opacity: 0.5; }
 
 .header__callback-link {
   display: inline-block;
@@ -170,9 +179,13 @@ input[type="checkbox"].visually-hidden {
     height: 18px;
     background-image: url("../img/phone-call.svg"); }
 
-.contacts-list__link:hover::before {
+.contacts-list__link:hover::before,
+.contacts-list__link:focus::before {
   -webkit-filter: brightness(100);
           filter: brightness(100); }
+
+.contacts-list__link:active {
+  opacity: 0.5; }
 
 .contacts-list__item-text {
   display: inline-block;
@@ -847,6 +860,8 @@ input[type="checkbox"].visually-hidden {
     background-color: transparent; }
   .form__input:hover, .form__input:focus {
     background-color: rgba(229, 242, 255, 0.3); }
+  .form__input:active {
+    outline: 1px solid #ffffff; }
 
 .form__label--textarea .form__input {
   min-height: 153px; }
@@ -891,6 +906,10 @@ input[type="checkbox"].visually-hidden {
   color: #ffffff;
   opacity: 0.8;
   cursor: pointer; }
+  .form__nav-privacy-label:hover, .form__nav-privacy-label:focus {
+    opacity: 1; }
+  .form__nav-privacy-label:active {
+    opacity: 0.5; }
 
 .form__nav-privacy-description {
   position: relative; }
@@ -1046,6 +1065,11 @@ input[type="checkbox"].visually-hidden {
   background-size: contain;
   border: none;
   background-color: transparent; }
+  .modal-window__close-button:hover, .modal-window__close-button:focus {
+    width: 17px;
+    height: 17px; }
+  .modal-window__close-button:active {
+    opacity: 0.5; }
 
 .modal-window__submit-button {
   display: block;
@@ -1297,6 +1321,10 @@ input[type="checkbox"].visually-hidden {
 
 .social-block img {
   padding: 0; }
+  .social-block img:hover, .social-block img:focus {
+    opacity: 0.8; }
+  .social-block img:active {
+    opacity: 0.5; }
 
 .social-block__item {
   display: none; }

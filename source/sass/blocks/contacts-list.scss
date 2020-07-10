@@ -41,10 +41,15 @@
   }
 }
 
-.contacts-list__link:hover {
+.contacts-list__link:hover,
+.contacts-list__link:focus {
   &::before {
     filter: brightness(100);
   }
+}
+
+.contacts-list__link:active {
+  opacity: 0.5;
 }
 
 .contacts-list__item-text {
