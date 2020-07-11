@@ -39,6 +39,7 @@
   "dependencies": {
     "axios": "0.19.2",
     "imask": "^6.0.5",
-    "redux-thunk": "2.3.0"
+    "redux-thunk": "2.3.0",
+    "normalize.css": "^8.0.1"
   }
 }
