@@ -148,16 +148,6 @@
     border-top: $border-line;
   }
 
-  .info-menu--collapsed {
-    .info-menu h3::after {
-      background-image: url("../img/plus.svg");
-    }
-
-    .info-menu__list {
-      display: none;
-    }
-  }
-
   .info-menu h3 {
     position: relative;
     margin: 0;
@@ -176,6 +166,20 @@
       background-image: url("../img/minus.svg");
 
       @include backImage();
+    }
+  }
+
+  .info-menu--collapsed {
+    h3::after {
+      background-image: url("../img/plus.svg");
+    }
+
+    h3:hover {
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .info-menu__list {
+      display: none;
     }
   }
 }

@@ -13,7 +13,7 @@
 }
 
 .main-screen__text-wrapper {
-  max-width: 44%;
+  max-width: 45%;
   padding: 0;
 }
 
@@ -22,7 +22,7 @@
   margin-bottom: 0;
 
   @include Roboto-style(80px, bold, 106px, $white, left, uppercase);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
   z-index: 10;
 }
 
@@ -54,7 +54,7 @@
 .main-screen__link {
   margin: 0 auto 0 97px;
   padding: 16px 45px 18px 47px;
-  max-width: 317px;
+  max-width: 340px;
   display: block;
 
   border: none;
@@ -135,8 +135,12 @@
 
   .main-screen__text-wrapper {
     max-width: 61%;
-    padding: 36px 0 0 88px;
+    padding: 40px 0 0 88px;
     margin: 0;
+  }
+
+  .main-screen__link {
+    max-width: 319px;
   }
 
   .main-screen__scroll {
@@ -159,7 +163,7 @@
 
   .main-screen__text-wrapper {
     max-width: 61%;
-    padding: 36px 0 0 88px;
+    padding: 40px 0 0 88px;
     margin: 0;
   }
 
