@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-.modal-window__form {
+.modal-window form {
   position: absolute;
   top: 136px;
   left: 0;
@@ -31,8 +31,16 @@
   background-color: $blue;
 }
 
+.modal-window__form-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 574px;
+}
+
 .modal-window__text {
   padding-bottom: 8px;
+  margin: 0;
 
   @include Roboto-style(28px, normal, 39px, $white, left, none);
 }
@@ -40,10 +48,24 @@
 .modal-window__description {
   padding-bottom: 33px;
   padding-right: 17px;
+  margin: 0;
+
+  color: $white;
 }
 
-.modal-window__input--textarea {
+.modal-window textarea {
   min-height: 102px;
+}
+
+.modal-window__label {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.modal-window__label:not(.modal-window__label--textarea) {
+  margin-bottom: 34px;
 }
 
 .modal-window__label--textarea {
@@ -78,10 +100,30 @@
 }
 
 .modal-window__submit-button {
-  display: block;
+  padding: 13px 0 13px 0;
   width: 100%;
-  max-width: none;
-  margin: 0 auto;
+  display: block;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
+  letter-spacing: 0.05em;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: $white;
+    color: $blue;
+  }
+
+  &:active {
+    background-color: $active-blue;
+    border-color: $active-blue;
+  }
 }
 
 .modal-window__privacy-label {
@@ -95,26 +137,108 @@
   margin-bottom: 34px;
 }
 
-.modal-window__input {
+
+.modal-window input,
+.modal-window textarea {
+  padding: 13px 19px 14px 19px;
+  resize: none;
+  box-sizing: border-box;
   width: 100%;
+
+  background-color: rgba(229, 242, 255, 0.1);
+  border: none;
+  cursor: pointer;
+
+  @include PTMono-style(16px, normal, 22px, $white, left, none);
+
+  &::placeholder {
+    color: $white;
+    font-size: 16px;
+    line-height: 35px;
+
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(229, 242, 255, 0.3);
+  }
+
+  &:active {
+    outline: 1px solid $white;
+  }
 }
 
-.modal-window .modal-window__input--textarea {
+.modal-window textarea {
   min-height: 99px;
   padding: 4px 19px 14px 23px;
 }
 
-.modal-window__input::placeholder {
+.modal-window input::placeholder {
   width: 100%;
   line-height: 36px;
 }
 
+.modal-window__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 0 0;
+  margin: 0 auto;
+  max-width: 590px;
+}
+
 .modal-window__privacy-checkbox + .modal-window__privacy-description::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
   top: 0;
   left: -49px;
+  width: 15px;
+  height: 14px;
+  margin-right: 17px;
+  cursor: pointer;
+
+  border: solid 1px $white;
 }
 
 .modal-window__privacy-checkbox:checked + .modal-window__privacy-description::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
   top: 5px;
   left: -46px;
+  width: 10px;
+  height: 6px;
+  cursor: pointer;
+
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.modal-window__privacy-label {
+  padding: 32px 23px 0 49px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal-window__privacy-description {
+  position: relative;
 }

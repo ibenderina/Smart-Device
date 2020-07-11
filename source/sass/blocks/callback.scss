@@ -33,12 +33,171 @@
   }
 }
 
-.callback__wrapper .form {
+.callback form {
   padding: 90px 40px 110px 762px;
 }
 
+.callback__form-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 574px;
+}
+
+.callback__text {
+  padding-bottom: 5px;
+  margin: 0;
+
+  @include Roboto-style(36px, normal, 57px, $white, left, none);
+}
+
+.callback__description {
+  margin: 0;
+  padding-bottom: 52px;
+
+  color: $white;
+}
+
+.callback__form-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.callback__form-label:not(.callback__form-label--textarea) {
+  margin-bottom: 40px;
+  width: 47%;
+}
+
+.callback input,
+.callback textarea {
+  padding: 13px 19px 14px 19px;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+
+  background-color: rgba(229, 242, 255, 0.1);
+  border: none;
+  cursor: pointer;
+
+  @include PTMono-style(16px, normal, 22px, $white, left, none);
+
+  &::placeholder {
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
+
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(229, 242, 255, 0.3);
+  }
+
+  &:active {
+    outline: 1px solid $white;
+  }
+}
+
+.callback__form-label--textarea textarea {
+  min-height: 153px;
+}
+
+.callback__form-nav {
+  max-width: 572px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 0 0;
+}
+
+.callback__submit-button {
+  padding: 13px 0 13px 0;
+  width: 48%;
+  display: block;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @include Roboto-style(14px, bold, 18px, $white, center, uppercase);
+  letter-spacing: 0.05em;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: $white;
+    color: $blue;
+  }
+
+  &:active {
+    background-color: $active-blue;
+    border-color: $active-blue;
+  }
+}
+
+.callback__privacy-label {
+  width: 36%;
+  padding: 10px 23px 0 34px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.callback__privacy-description {
+  position: relative;
+}
+
+.callback__privacy-checkbox + .callback__privacy-description::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: -2px;
+  left: -32px;
+  width: 15px;
+  height: 14px;
+  margin-right: 17px;
+  cursor: pointer;
+
+  border: solid 1px $white;
+}
+
+.callback__privacy-checkbox:checked + .callback__privacy-description::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 2px;
+  left: -29px;
+  width: 10px;
+  height: 6px;
+  cursor: pointer;
+
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 @media (max-width: $desktop-width) {
-  .callback__wrapper .form {
+  .callback form {
     padding: 90px 40px 110px 762px;
   }
 
@@ -57,10 +216,52 @@
       height: 884px;
     }
   }
+
+  .callback__text {
+    padding-bottom: 14px;
+
+    @include Roboto-style(32px, normal, 45px, $white, left, none);
+  }
+
+  .callback__description {
+    padding-bottom: 53px;
+  }
+
+  .callback__form-block {
+    max-width: none;
+  }
+
+  .callback__form-label:not(.callback__form-label--textarea) {
+    margin-bottom: 46px;
+    width: 47%;
+  }
+
+  .callback__form-label--textarea textarea {
+    min-height: 159px;
+  }
+
+  .callback__form-nav {
+    margin: 0 auto;
+    max-width: 590px;
+  }
+
+  .callback__privacy-label {
+    padding: 10px 14px 0 0;
+    width: 38%;
+  }
+
+  .callback__privacy-checkbox + .callback__privacy-description::before {
+    top: 0;
+  }
+
+  .callback__privacy-checkbox:checked + .callback__privacy-description::after {
+    top: 4px;
+    left: -29px;
+  }
 }
 
 @media (max-width: 1500px) {
-  .callback__wrapper .form {
+  .callback__wrapper form {
     padding: 79px 84px 106px 84px;
     margin: 0 auto;
     max-width: 600px;
@@ -88,14 +289,49 @@
     }
   }
 
-  .callback__wrapper .form {
+  .callback__wrapper form {
     padding: 79px 84px 106px 92px;
   }
 }
 
-
 @media (max-width: $mobile-width) {
-  .callback__wrapper .form {
+  .callback__wrapper form {
     padding: 33px 15px 40px;
+  }
+
+  .callback__text {
+    padding-bottom: 14px;
+
+    @include Roboto-style(28px, normal, 39px, $white, left, none);
+  }
+
+  .callback__description {
+    padding-bottom: 25px;
+  }
+
+  .callback__form-label:not(.callback__form-label--textarea) {
+    width: 100%;
+    margin-bottom: 34px;
+  }
+
+  .callback__form-label--textarea textarea {
+    min-height: 103px;
+  }
+
+  .callback__form-nav {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .callback__submit-button {
+    display: block;
+    width: 100%;
+  }
+
+  .callback__privacy-label {
+    padding: 30px 32px 0 32px;
+    width: 100%;
+    display: block;
   }
 }

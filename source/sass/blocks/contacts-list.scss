@@ -96,6 +96,7 @@
 @media (max-width: $mobile-width) {
   .contacts-list {
     width: 34%;
+    max-width: 112px;
     padding: 5px 0 5px 24px;
     margin-right: -4px;
     margin-left: 3px;

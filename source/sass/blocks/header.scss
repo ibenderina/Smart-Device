@@ -31,10 +31,10 @@
 }
 
 .header__nav-toggle {
-  width: 64px;
+  width: 37px;
   height: 13px;
-  margin-top: 17px;
-  margin-left: 336px;
+  margin-top: 20px;
+  margin-left: 103px;
 
   background-color: transparent;
   border-top: 1px solid $white;
@@ -83,6 +83,13 @@
 @media (max-width: 1300px) {
   .header__callback-link {
     display: none;
+  }
+
+  .header__nav-toggle {
+    width: 64px;
+    height: 13px;
+    margin-top: 17px;
+    margin-left: 336px;
   }
 }
 
