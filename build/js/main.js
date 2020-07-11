@@ -8,7 +8,7 @@
     CALLBACK_WINDOW: `.modal-window`,
     ACTIVE_CALLBACK_WINDOW: `modal-window--active`,
     CLOSE_BUTTON: `.modal-window__close-button`,
-    MODAL_FORM: `.modal-window__form`,
+    MODAL_FORM: `.modal-window form`,
     SCROLL_LINKS: `.main-screen__scroll, .main-screen__link`,
     INPUT_NAME: `#username`,
   };
@@ -111,6 +111,18 @@
         mask: `+{7}(000)000-00-00`
       });
   });
+
+  // var call_back_form = document.querySelector('.call-back__button');
+  // call_back_form.addEventListener('click', function (evt) {
+  //   var form = evt.target.closest('form');
+  //   if (!form.checkValidity()) {
+  //     var callback_window = form.closest('.call-back__window');
+  //     callback_window.classList.add('call-back--error');
+  //     setTimeout(function () {
+  //       callback_window.classList.remove('call-back--error');
+  //     }, 400);
+  //   }
+  // });
 
   openModalWindow();
   closeModalWindow();
