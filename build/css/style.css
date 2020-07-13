@@ -1,10 +1,9 @@
-@import url(../../node_modules/normalize.css/normalize.css);
 @font-face {
   font-family: "PT Mono";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/pt-mono-woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff"); }
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto Condensed";
@@ -279,7 +278,7 @@ input[type="checkbox"].visually-hidden {
 .main-screen__link {
   margin: 0 auto 0 97px;
   padding: 16px 45px 18px 47px;
-  max-width: 340px;
+  max-width: 317px;
   display: block;
   border: none;
   background-color: #00b2ff;
@@ -325,6 +324,8 @@ input[type="checkbox"].visually-hidden {
 @media (max-width: 1919px) {
   .main-screen {
     background-position: 97% 41%; }
+  .main-screen__link {
+    max-width: 340px; }
   .main-screen__text-wrapper {
     max-width: 50%; } }
 

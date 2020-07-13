@@ -23,8 +23,10 @@
     "gulp-svgstore": "7.0.1",
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "jpegtran": "^1.0.6",
     "node-normalize-scss": "^8.1.2",
-    "posthtml-include": "1.4.3",
+    "posthtml-include": "^1.4.3",
     "readable-stream": "3.6.0",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
@@ -37,9 +39,6 @@
     "start": "gulp start"
   },
   "dependencies": {
-    "axios": "0.19.2",
-    "imask": "^6.0.5",
-    "redux-thunk": "2.3.0",
-    "normalize.css": "^8.0.1"
+    "imask": "^6.0.5"
   }
 }

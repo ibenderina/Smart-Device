@@ -54,7 +54,7 @@
 .main-screen__link {
   margin: 0 auto 0 97px;
   padding: 16px 45px 18px 47px;
-  max-width: 340px;
+  max-width: 317px;
   display: block;
 
   border: none;
@@ -113,6 +113,10 @@
 @media (max-width: $desktop-width) {
   .main-screen {
     background-position: 97% 41%;
+  }
+
+  .main-screen__link {
+    max-width: 340px;
   }
 
   .main-screen__text-wrapper {

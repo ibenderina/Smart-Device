@@ -17,7 +17,7 @@
 
   const ESC = `Escape`;
 
-  const PHONE_INPUTS = [`phone`, `user_phone`];
+  const PHONE_INPUTS = [`phone`, `userphone`];
 
   const classListAdd = function (element, className) {
     element.classList.add(className);
@@ -111,18 +111,6 @@
         mask: `+{7}(000)000-00-00`
       });
   });
-
-  // var call_back_form = document.querySelector('.call-back__button');
-  // call_back_form.addEventListener('click', function (evt) {
-  //   var form = evt.target.closest('form');
-  //   if (!form.checkValidity()) {
-  //     var callback_window = form.closest('.call-back__window');
-  //     callback_window.classList.add('call-back--error');
-  //     setTimeout(function () {
-  //       callback_window.classList.remove('call-back--error');
-  //     }, 400);
-  //   }
-  // });
 
   openModalWindow();
   closeModalWindow();
