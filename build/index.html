@@ -278,15 +278,12 @@
         <p class="callback__text">Остались вопросы? Задайте их нам!</p>
         <p class="callback__description">Мы проконсультируем Вас бесплатно</p>
         <div class="callback__form-block">
-          <label class="callback__form-label" for="name">
-            <input type="text" placeholder="Имя" name="name" id="name" required="">
-          </label>
-          <label class="callback__form-label" for="phone">
-            <input type="text" placeholder="Телефон" name="phone" id="phone" required="" minlength="16">
-          </label>
-          <label class="callback__form-label callback__form-label--textarea" for="text">
-            <textarea placeholder="Ваш вопрос" name="text" id="text"></textarea>
-          </label>
+          <input type="text" placeholder="Имя" name="name" id="name" required="">
+          <input type="text" placeholder="Телефон" name="phone" id="phone" required="" minlength="16">
+          <textarea placeholder="Ваш вопрос" name="text" id="text"></textarea>
+          <label class="callback__form-label visually-hidden" for="name"></label>
+          <label class="callback__form-label visually-hidden" for="phone"></label>
+          <label class="callback__form-label visually-hidden" for="text"></label>
         </div>
         <div class="callback__form-nav">
           <button class="callback__submit-button" type="submit">Задать вопрос</button>
