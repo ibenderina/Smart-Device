@@ -174,8 +174,8 @@ input[type="checkbox"].visually-hidden {
   .contacts-list__link--mail {
     padding-right: 82px; }
   .contacts-list__link--mail::before {
-    width: 30px;
-    height: 15px;
+    width: 19px;
+    height: 14px;
     margin-right: 8px;
     background-image: url("../img/mail.svg"); }
   .contacts-list__link--tel::before {
@@ -204,8 +204,8 @@ input[type="checkbox"].visually-hidden {
   .contacts-list__item-text {
     display: none; }
   .contacts-list__link--mail::before {
-    width: 25px;
-    height: 25px; }
+    width: 26px;
+    height: 23px; }
   .contacts-list__link--tel::before {
     width: 25px;
     height: 25px; } }
@@ -225,7 +225,10 @@ input[type="checkbox"].visually-hidden {
     max-width: 112px;
     padding: 5px 0 5px 24px;
     margin-right: -4px;
-    margin-left: 3px; } }
+    margin-left: 3px; }
+  .contacts-list__link--mail::before {
+    width: 25px;
+    height: 18px; } }
 
 .main-screen {
   position: relative;
@@ -789,13 +792,15 @@ input[type="checkbox"].visually-hidden {
   display: block;
   margin-bottom: 40px;
   width: 47%;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
 
 .callback textarea {
   display: block;
   width: 100%;
   margin-bottom: 29px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
 
 .callback input,
 .callback textarea {
@@ -805,6 +810,7 @@ input[type="checkbox"].visually-hidden {
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
   cursor: pointer;
+  color: #ffffff;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: normal;
   text-transform: none;
@@ -829,6 +835,12 @@ input[type="checkbox"].visually-hidden {
     background-color: transparent; }
   .callback input::placeholder,
   .callback textarea::placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: transparent; }
+  .callback input::-ms-input-placeholder,
+  .callback textarea::-ms-input-placeholder {
     color: #ffffff;
     font-size: 16px;
     line-height: 22px;
@@ -1154,6 +1166,7 @@ input[type="checkbox"].visually-hidden {
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
   cursor: pointer;
+  border-radius: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: normal;
   text-transform: none;
@@ -1181,6 +1194,12 @@ input[type="checkbox"].visually-hidden {
     color: #ffffff;
     font-size: 16px;
     line-height: 35px;
+    background-color: transparent; }
+  .modal-window input::-ms-input-placeholder,
+  .modal-window textarea::-ms-input-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
     background-color: transparent; }
   .modal-window input:hover, .modal-window input:focus,
   .modal-window textarea:hover,
@@ -1699,11 +1718,12 @@ input[type="checkbox"].visually-hidden {
       background-repeat: no-repeat;
       background-position: 100%;
       background-size: contain; }
-  .info-menu--collapsed h3::after {
+  h3.info-menu--collapsed::after {
     background-image: url("../img/plus.svg"); }
-  .info-menu--collapsed h3:hover {
+  h3.info-menu--collapsed:hover {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4); }
-  .info-menu--collapsed .info-menu__list {
+  h3.info-menu--collapsed + .info-menu__list,
+  h3.info-menu--collapsed + .info-menu__list-wrapper {
     display: none; } }
 
 .copyright {

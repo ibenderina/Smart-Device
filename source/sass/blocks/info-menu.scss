@@ -183,16 +183,17 @@
     }
   }
 
-  .info-menu--collapsed {
-    h3::after {
+  h3.info-menu--collapsed {
+    &::after {
       background-image: url("../img/plus.svg");
     }
 
-    h3:hover {
+    &:hover {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
     }
 
-    .info-menu__list {
+    & + .info-menu__list,
+    & + .info-menu__list-wrapper {
       display: none;
     }
   }

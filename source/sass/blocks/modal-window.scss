@@ -148,6 +148,7 @@
   background-color: rgba(229, 242, 255, 0.1);
   border: none;
   cursor: pointer;
+  border-radius: 0;
 
   @include PTMono-style(16px, normal, 22px, $white, left, none);
 
@@ -155,6 +156,14 @@
     color: $white;
     font-size: 16px;
     line-height: 35px;
+
+    background-color: transparent;
+  }
+
+  &::-ms-input-placeholder {
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
 
     background-color: transparent;
   }

@@ -1,8 +1,6 @@
 (function () {
   const ClassName = {
-    INFO_MENU: `.info-menu__wrapper`,
     INFO_MENU_HEADLINE: `.info-menu__headline`,
-    INFO_MENU_LIST: `.info-menu__list`,
     COLLAPSED_BLOCK: `info-menu--collapsed`,
     CALLBACK_BUTTON: `.header__callback-link`,
     CALLBACK_WINDOW: `.modal-window`,
@@ -28,26 +26,27 @@
   };
 
   const toggleInfoBlock = function (selectorHeadline) {
-    const element = selectorHeadline.closest(ClassName.INFO_MENU);
-    if (!(selectorHeadline && element)) {
-      return;
-    }
-    window.addEventListener(`resize`, function (evt) {
-      if (innerWidth < DEVICE_SIZE) {
-        classListAdd(element, ClassName.COLLAPSED_BLOCK);
-      } else {
-        classListRemove(element, ClassName.COLLAPSED_BLOCK);
-      }
-    });
+    const headlineElements = Array.from(document.querySelectorAll(selectorHeadline));
 
-    selectorHeadline.addEventListener(`click`, function () {
-      if (innerWidth < DEVICE_SIZE) {
-        if (element.classList.contains(ClassName.COLLAPSED_BLOCK)) {
-          classListRemove(element, ClassName.COLLAPSED_BLOCK);
-        } else {
-          classListAdd(element, ClassName.COLLAPSED_BLOCK);
+    headlineElements.forEach(function(element) {
+      classListAdd(element, ClassName.COLLAPSED_BLOCK);
+      window.addEventListener(`resize`, function (evt) {
+        const action = innerWidth < DEVICE_SIZE ? classListAdd : classListRemove;
+        action(element, ClassName.COLLAPSED_BLOCK);
+      });
+
+      element.addEventListener(`click`, function () {
+        if (innerWidth < DEVICE_SIZE) {
+          let action = classListAdd;
+          if (element.classList.contains(ClassName.COLLAPSED_BLOCK)) {
+            headlineElements.forEach((elem) => {
+              classListAdd(elem, ClassName.COLLAPSED_BLOCK);
+            });
+            action = classListRemove;
+          }
+          action(element, ClassName.COLLAPSED_BLOCK);
         }
-      }
+      });
     });
   };
 
@@ -116,8 +115,5 @@
   closeModalWindow();
   smoothScroll(ClassName.SCROLL_LINKS);
 
-  Array.from(document.querySelectorAll(ClassName.INFO_MENU_HEADLINE))
-  .forEach(function(selectorHeadline) {
-    toggleInfoBlock(selectorHeadline);
-  });
+  toggleInfoBlock(ClassName.INFO_MENU_HEADLINE);
 })();
