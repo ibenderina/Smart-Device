@@ -120,7 +120,7 @@ input[type="checkbox"].visually-hidden {
   color: #ffffff;
   text-align: center;
   text-decoration: none; }
-  .header__callback-link:hover, .header__callback-link:active {
+  .header__callback-link:hover, .header__callback-link:focus {
     background-color: #00b2ff;
     border-color: #00b2ff; }
   .header__callback-link:active {
