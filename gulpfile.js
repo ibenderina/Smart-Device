@@ -22,7 +22,9 @@ gulp.task("css", function () {
   .pipe(sourcemap.init())
   .pipe(sass())
   .pipe(postcss([
-    autoprefixer()
+    autoprefixer({
+      browsers: ["last 4 versions"]
+    })
   ]))
   .pipe(rename("style.css"))
   .pipe(sourcemap.write("."))
