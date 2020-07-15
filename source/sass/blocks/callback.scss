@@ -109,6 +109,7 @@
 .callback__form-nav {
   max-width: 572px;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 14px 0 0 0;
@@ -197,6 +198,10 @@
   background-position: center;
 }
 
+.callback__privacy-checkbox:focus + .callback__privacy-description::before {
+  outline: 2px solid #7f5faf;
+}
+
 @media (max-width: $desktop-width) {
   .callback form {
     padding: 90px 40px 110px 762px;
@@ -225,7 +230,7 @@
   }
 
   .callback__description {
-    padding-bottom: 53px;
+    padding-bottom: 56px;
   }
 
   .callback__form-block {
@@ -328,7 +333,7 @@
   }
 
   .callback__form-nav {
-    display: block;
+    flex-direction: column-reverse;
     padding: 0;
     margin: 0 auto;
   }

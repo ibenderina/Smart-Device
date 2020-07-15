@@ -77,6 +77,12 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .copyright__list {
+    padding: 22px 24px 0 4px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .copyright__item {
     width: 100%;
@@ -84,5 +90,9 @@
     text-align: center;
     padding-top: 11px;
     padding-bottom: 9px;
+  }
+
+  .copyright__list {
+    padding: 20px 5px 0 8px;
   }
 }

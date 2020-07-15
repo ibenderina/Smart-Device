@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-grow: 1;
+  padding: 0;
 }
 
 .info-menu__wrapper {
@@ -19,9 +20,8 @@
 }
 
 .info-menu h3 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 28px;
+  padding: 5px 0 0 3px;
+  margin: 0 0 26px;
   width: 100%;
 
   @include Roboto-style(15px, normal, 16px, #1B2D37, left, uppercase);
@@ -68,6 +68,10 @@
 }
 
 @media (max-width: $desktop-width) {
+  .info-menu {
+    padding: 0;
+  }
+
   .info-menu__sitemap {
     padding-left: 0;
   }
@@ -127,6 +131,16 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .info-menu {
+    padding: 41px 27px 35px;
+  }
+
+  .info-menu__contacts {
+    width: 48%;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .info-menu {
     display: block;
@@ -151,7 +165,7 @@
   .info-menu h3 {
     position: relative;
     margin: 0;
-    padding: 28px 15px;
+    padding: 30px 15px 27px 15px;
     box-sizing: border-box;
 
     &::after {

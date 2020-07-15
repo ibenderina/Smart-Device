@@ -700,6 +700,8 @@ input[type="checkbox"].visually-hidden {
   .about p {
     margin: 0;
     padding: 0 0 24px 0; }
+    .about p:first-of-type {
+      padding: 0 0 20px 0; }
   .about span {
     display: none; }
   .about a {
@@ -707,7 +709,7 @@ input[type="checkbox"].visually-hidden {
 
 @media (max-width: 767px) {
   .about {
-    padding: 15px 13px 65px 13px;
+    padding: 15px 16px 65px;
     background: none; }
   .about h2 {
     padding: 0 0 21px;
@@ -721,9 +723,11 @@ input[type="checkbox"].visually-hidden {
   .about p {
     padding-bottom: 40px; }
     .about p:last-of-type {
-      padding-bottom: 29px; }
-  .about a {
-    margin-top: 0; } }
+      padding-bottom: 14px; }
+    .about p:first-of-type {
+      padding: 0 0 39px; }
+    .about p .about a {
+      margin-top: 0; } }
 
 .callback {
   background-color: #00b2ff; }
@@ -843,6 +847,7 @@ input[type="checkbox"].visually-hidden {
 .callback__form-nav {
   max-width: 572px;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 14px 0 0 0; }
@@ -916,6 +921,9 @@ input[type="checkbox"].visually-hidden {
   background-size: contain;
   background-position: center; }
 
+.callback__privacy-checkbox:focus + .callback__privacy-description::before {
+  outline: 2px solid #7f5faf; }
+
 @media (max-width: 1919px) {
   .callback form {
     padding: 90px 40px 110px 762px; }
@@ -939,7 +947,7 @@ input[type="checkbox"].visually-hidden {
     color: #ffffff;
     text-align: left; }
   .callback__description {
-    padding-bottom: 53px; }
+    padding-bottom: 56px; }
   .callback__form-block {
     max-width: none; }
   .callback input {
@@ -1005,7 +1013,7 @@ input[type="checkbox"].visually-hidden {
   .callback textarea {
     min-height: 103px; }
   .callback__form-nav {
-    display: block;
+    flex-direction: column-reverse;
     padding: 0;
     margin: 0 auto; }
   .callback__submit-button {
@@ -1222,6 +1230,9 @@ input[type="checkbox"].visually-hidden {
   margin-right: 17px;
   cursor: pointer;
   border: solid 1px #ffffff; }
+
+.modal-window__privacy-checkbox:focus + .modal-window__privacy-description::before {
+  outline: 2px solid #7f5faf; }
 
 .modal-window__privacy-checkbox:checked + .modal-window__privacy-description::after {
   content: "";
@@ -1488,6 +1499,10 @@ input[type="checkbox"].visually-hidden {
   .social-block a {
     padding-left: 8px; } }
 
+@media (max-width: 1023px) {
+  .social-block__item {
+    padding: 0 0 0 46px; } }
+
 @media (max-width: 767px) {
   .social-block {
     border-bottom: none;
@@ -1552,7 +1567,8 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding: 0; }
 
 .info-menu__wrapper {
   padding: 0;
@@ -1566,9 +1582,8 @@ input[type="checkbox"].visually-hidden {
   padding-left: 81px; }
 
 .info-menu h3 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 28px;
+  padding: 5px 0 0 3px;
+  margin: 0 0 26px;
   width: 100%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
@@ -1608,6 +1623,8 @@ input[type="checkbox"].visually-hidden {
   cursor: pointer; }
 
 @media (max-width: 1919px) {
+  .info-menu {
+    padding: 0; }
   .info-menu__sitemap {
     padding-left: 0; }
   .info-menu__contacts {
@@ -1645,6 +1662,12 @@ input[type="checkbox"].visually-hidden {
   .info-menu__contacts {
     width: 47%; } }
 
+@media (max-width: 1023px) {
+  .info-menu {
+    padding: 41px 27px 35px; }
+  .info-menu__contacts {
+    width: 48%; } }
+
 @media (max-width: 767px) {
   .info-menu {
     display: block;
@@ -1661,7 +1684,7 @@ input[type="checkbox"].visually-hidden {
   .info-menu h3 {
     position: relative;
     margin: 0;
-    padding: 28px 15px;
+    padding: 30px 15px 27px 15px;
     box-sizing: border-box; }
     .info-menu h3::after {
       content: "";
@@ -1738,13 +1761,19 @@ input[type="checkbox"].visually-hidden {
   .copyright__item:first-child {
     display: none; } }
 
+@media (max-width: 1023px) {
+  .copyright__list {
+    padding: 22px 24px 0 4px; } }
+
 @media (max-width: 767px) {
   .copyright__item {
     width: 100%;
     flex-basis: auto;
     text-align: center;
     padding-top: 11px;
-    padding-bottom: 9px; } }
+    padding-bottom: 9px; }
+  .copyright__list {
+    padding: 20px 5px 0 8px; } }
 
 .master-block {
   background-color: #1b2d37;

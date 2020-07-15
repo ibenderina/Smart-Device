@@ -63,6 +63,12 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .social-block__item {
+    padding: 0 0 0 46px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .social-block {
     border-bottom: none;

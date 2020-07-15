@@ -121,6 +121,10 @@
   .about p {
     margin: 0;
     padding: 0 0 24px 0;
+
+    &:first-of-type {
+      padding: 0 0 20px 0;
+    }
   }
 
   .about span {
@@ -134,7 +138,7 @@
 
 @media (max-width: $mobile-width) {
   .about {
-    padding: 15px 13px 65px 13px;
+    padding: 15px 16px 65px;
 
     background: none;
   }
@@ -149,11 +153,15 @@
     padding-bottom: 40px;
 
     &:last-of-type {
-      padding-bottom: 29px;
+      padding-bottom: 14px;
     }
-  }
 
-  .about a {
-    margin-top: 0;
+    &:first-of-type {
+      padding: 0 0 39px;
+    }
+
+    .about a {
+      margin-top: 0;
+    }
   }
 }
