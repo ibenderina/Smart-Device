@@ -250,8 +250,8 @@ input[type="checkbox"].visually-hidden {
     margin-right: -4px;
     margin-left: 3px; }
   .contacts-list__link--mail::before {
-    width: 25px;
-    height: 18px; } }
+    width: 22px;
+    height: 23px; } }
 
 .main-screen {
   position: relative;
